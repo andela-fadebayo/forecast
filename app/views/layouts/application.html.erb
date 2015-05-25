@@ -23,6 +23,8 @@
 <% else %>
     <%= link_to 'Register', new_guest_registration_path %> |
     <%= link_to 'Login', new_guest_session_path %> |
+    <%= link_to "Sign in with Google", guest_omniauth_authorize_path(:google_oauth2) %>
+    <%= link_to "Login with Facebook", guest_omniauth_authorize_path(:facebook) %>
 <% end %>
 
 <%= yield %>
