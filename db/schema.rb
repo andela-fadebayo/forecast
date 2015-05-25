@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150523145959) do
+ActiveRecord::Schema.define(version: 20150525111643) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,4 +40,17 @@ ActiveRecord::Schema.define(version: 20150523145959) do
   add_index "guests", ["reset_password_token"], name: "index_guests_on_reset_password_token", unique: true, using: :btree
   add_index "guests", ["username"], name: "index_guests_on_username", unique: true, using: :btree
 
+  create_table "providers", force: :cascade do |t|
+    t.integer  "guest_id"
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "token"
+    t.string   "refresh_token"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "providers", ["guest_id"], name: "index_providers_on_guest_id", using: :btree
+
+  add_foreign_key "providers", "guests"
 end
