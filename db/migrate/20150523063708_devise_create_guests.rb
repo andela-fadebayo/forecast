@@ -34,7 +34,6 @@ class DeviseCreateGuests < ActiveRecord::Migration
       t.timestamps
     end
 
-    add_index :guests, :email,                unique: true
     add_index :guests, :reset_password_token, unique: true
     # add_index :guests, :confirmation_token,   unique: true
     # add_index :guests, :unlock_token,         unique: true
