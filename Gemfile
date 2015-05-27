@@ -7,6 +7,15 @@ gem 'rails', '4.2.1'
 gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
+
+# Use Bootstrap SASS for other stylesheets
+gem 'bootstrap-sass', '~> 3.3.3'
+gem 'autoprefixer-rails'
+
+# Use font-awesome SASS for improved styling
+gem 'font-awesome-sass', '~> 4.3.0'
+gem 'bootstrap-social-rails', '~> 4.8.0'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views

@@ -1,0 +1,94 @@
+%nav.navbar.navbar-default
+  .container-fluid
+    .navbar-header
+      %button.navbar-toggle.collapsed{:type => 'button', 'data-toggle' => 'collapse', 'data-target' => '#bs-example-navbar-collapse-1'}
+        %i.fa.fa-bars
+      %a.navbar-brand{:href => '/'} Forecast
+    .collapse.navbar-collapse#bs-example-navbar-collapse-1
+      %ul.nav.navbar-nav.navbar-right
+        - if guest_signed_in?
+          %li Signed in!
+          %li= link_to 'logout', destroy_guest_session_path, method: :delete
+        - else
+          %li
+            %btn.btn{:type => 'button', 'data-toggle' => 'modal', 'data-target' => '#registerModal'}
+              Register
+          %li.dropdown
+            %a.btn.dropdown-toggle{:href => '#', 'data-toggle' => 'dropdown', 'aria-expanded' => 'false'}
+              Login
+              %b.caret
+            %ul#dropdown-login.dropdown-menu{:role => 'menu'}
+              %p My Account
+              = form_for("guest", url: guest_session_path) do |f|
+                %li
+                  .control-group
+                    .controls
+                      = f.email_field :email, autofocus: true, placeholder: 'E-mail'
+                %li
+                  .control-group
+                    .controls
+                      = f.password_field :password, autocomplete: 'off', placeholder: 'Password'
+                %li
+                  .btn= f.submit 'LOG IN'
+
+#registerModal.modal.fade{:tabindex => '-1', :role => 'dialog', 'aria-labelledby' => 'registerModalLabel', 'aria-hidden' => 'true'}
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %btn.close{:type => 'button', 'data-dismiss' => 'modal', 'aria-label' => 'Close'}
+          %span{'aria-hidden' => true} &times;
+        %h4.text-center Create An Account
+      .modal-body
+        .container-fluid
+          .row
+            .col-md-8
+              = form_for('guest', url: registration_path('guest')) do |f|
+                .control-group
+                  .controls
+                    =f.text_field :first_name, autofocus: true, placeholder: 'First Name'
+                %br/
+                .control-group
+                  .controls
+                    = f.text_field :last_name, placeholder: 'Last Name'
+                %br/
+                .control-group
+                  .controls
+                    = f.select :sex, [['Male', 'Male'], ['Female', 'Female']]
+                .control-group
+                  .controls
+                    = f.date_select :birthday, start_year: 1900
+                %br/
+                .control-group
+                  .controls
+                    = f.text_field :image, placeholder: 'Paste a link to your picture'
+                %br/
+                %br/
+                .control-group
+                  .controls
+                    = f.text_field :username, placeholder: 'Username'
+                %br/
+                .control-group
+                  .controls
+                    = f.email_field :email, placeholder: 'E-mail'
+                .control-group
+                  .controls
+                    - if @minimum_password_length
+                      %em
+                        (#{@minimum_password_length} characters minimum)
+                %br/
+                .control-group
+                  .controls
+                    = f.password_field :password, autocomplete: 'off', placeholder: 'Password'
+                %br/
+                .control-group
+                  .controls
+                    = f.password_field :password_confirmation, autocomplete: 'off', placeholder: 'Confirm Password'
+                %br/
+                .actions
+                  %btn.btn{:type => 'button', 'data-dismiss' => 'modal'} Cancel
+                  = f.submit 'Create'
+            .col-md-4
+              %p Or Login with...
+              = link_to 'Google', guest_omniauth_authorize_path(:google_oauth2)
+              %p or
+              = link_to 'Facebook', guest_omniauth_authorize_path(:facebook)

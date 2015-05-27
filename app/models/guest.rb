@@ -22,7 +22,7 @@ class Guest < ActiveRecord::Base
         g.first_name = data.first_name
         g.last_name = data.last_name
         g.image = data.image
-        g.gender = data_extra.gender
+        g.sex = data_extra.gender
         g.birthday = data_extra.birthday
       end
     end
