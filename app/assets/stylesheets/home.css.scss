@@ -117,9 +117,12 @@ body {
   color: #fff;
 }
 
-.login-btn .btn input {
+.login-btn .btn input,
+.login-btn .btn input:focus,
+.login-btn .btn input:active {
   background-color: transparent;
   border: none;
+  outline: 0;
 }
 
 .login-btn .btn {
@@ -140,3 +143,64 @@ body {
   border: 1px solid #fff;
   color: #fff;
 }
+
+/* NAVBAR LOGIN */
+.dropdown {
+  padding: 0 5px;
+  border: 1px solid #ddd;
+  border-radius: .5em;
+}
+
+.dropdown:hover,
+.dropdown:focus,
+.dropdown:active {
+  border: 1px solid #fff;
+}
+
+.name {
+  font-size: 1.5em;
+}
+
+.navbar-nav > li > a {
+  line-height: normal;
+}
+
+.logout {
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 0;
+  text-align: center;
+  -webkit-transition: all .55s;
+  -moz-transition: all .55s;
+  -ms-transition: all .55s;
+  -o-transition: all .55s;
+  transition: all .55s;
+}
+
+.logout:hover,
+.logout:focus,
+.logout:active {
+  background-color: #fff;
+}
+
+.logout li {
+  padding: 5px 0;
+}
+
+.logout li a {
+  color: #fff;
+  -webkit-transition: all .55s;
+  -moz-transition: all .55s;
+  -ms-transition: all .55s;
+  -o-transition: all .55s;
+  transition: all .55s;
+}
+
+.logout li a:hover,
+.logout li a:focus,
+.logout li a:active {
+  color: #000;
+  font-size: 1.3em;
+}
+
+/* MENU - NAVBAR LEFT MENU */
