@@ -3,3 +3,140 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import "bootstrap-social";
+
+@font-face {
+  font-family: 'Admiration Pains';
+  src: url('Admiration Pains') format('truetype');
+}
+
+@font-face {
+  font-family: 'QuickSand';
+  src: url('Quicksand_Book.otf') format('truetype');
+}
+
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: 'QuickSand', sans-serif;
+  background-color: #666666;
+}
+
+/* NAVBAR HOMEPAGE */
+#nav-home {
+  padding: 20px 0;
+}
+
+.navbar-default {
+  background-color: transparent;
+  border-color: transparent;
+  border-bottom: 1px solid red;
+}
+
+.register,
+.login,
+.login:hover,
+.login:active,
+.login:focus {
+  background-color: transparent;
+  border: 1px solid #ddd;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.register:hover,
+.login:hover {
+  border-color: #fff;
+}
+
+.login {
+  margin-left: 20px;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #ddd;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > li > a:active {
+  color: #fff;
+}
+
+.register a,
+.login a {
+  font-size: 1.3em;
+  color: #ddd;
+}
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid transparent;
+}
+
+/* SUB - Login Dropdown Form */
+#dropdown-login {
+  padding: 20px;
+  background: url('opaque_bg.png') center center no-repeat;
+}
+
+#dropdown-login h2 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.login-input input {
+  padding: 5px;
+  font-size: 1.2em;
+  outline: 0;
+  color: #000;
+  width: 300px;
+  border: 1px solid #000;
+  -webkit-transition: background-color, border .4s;
+  -moz-transition: background-color, border .4s;
+  -ms-transition: background-color, border .4s;
+  -o-transition: background-color, border .4s;
+  transition: background-color, border .4s;
+}
+
+.login-input input:hover,
+.login-input input:active,
+.login-input input:focus {
+  border: 1px solid #fff;
+  background-color: transparent;
+  color: #fff;
+}
+
+.login-btn .btn input {
+  background-color: transparent;
+  border: none;
+}
+
+.login-btn .btn {
+  background-color: #fff;
+  border-radius: 0;
+  color: #000;
+  -webkit-transition: all .55s;
+  -moz-transition: all .55s;
+  -ms-transition: all .55s;
+  -o-transition: all .55s;
+  transition: all .55s;
+}
+
+.login-btn .btn:hover,
+.login-btn .btn:focus,
+.login-btn .btn:active {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+}
