@@ -41,9 +41,13 @@ body {
 
 .register,
 .login,
+.menu,
 .login:hover,
 .login:active,
-.login:focus {
+.login:focus,
+.menu:hover,
+.menu:focus,
+.menu:active {
   background-color: transparent;
   border: 1px solid #ddd;
   padding-right: 15px;
@@ -51,7 +55,8 @@ body {
 }
 
 .register:hover,
-.login:hover {
+.login:hover,
+.menu:hover {
   border-color: #fff;
 }
 
@@ -70,7 +75,8 @@ body {
 }
 
 .register a,
-.login a {
+.login a,
+.menu a {
   font-size: 1.3em;
   color: #ddd;
 }
@@ -145,15 +151,15 @@ body {
 }
 
 /* NAVBAR LOGIN */
-.dropdown {
+.logout {
   padding: 0 5px;
   border: 1px solid #ddd;
   border-radius: .5em;
 }
 
-.dropdown:hover,
-.dropdown:focus,
-.dropdown:active {
+.logout:hover,
+.logout:focus,
+.logout:active {
   border: 1px solid #fff;
 }
 
@@ -165,11 +171,14 @@ body {
   line-height: normal;
 }
 
-.logout {
+.logout-link,
+.menu-list {
+  color: #fff;
   background-color: transparent;
   border: 1px solid #fff;
   border-radius: 0;
-  text-align: center;
+  padding-top: 0;
+  padding-bottom: 0;
   -webkit-transition: all .55s;
   -moz-transition: all .55s;
   -ms-transition: all .55s;
@@ -177,18 +186,20 @@ body {
   transition: all .55s;
 }
 
-.logout:hover,
-.logout:focus,
-.logout:active {
+.logout-link:hover,
+.logout-link:focus,
+.logout-link:active {
   background-color: #fff;
+  color: #000;
 }
 
-.logout li {
+.logout-link li {
   padding: 5px 0;
 }
 
-.logout li a {
+.logout-link li a {
   color: #fff;
+  font-size: 1.2em;
   -webkit-transition: all .55s;
   -moz-transition: all .55s;
   -ms-transition: all .55s;
@@ -196,11 +207,33 @@ body {
   transition: all .55s;
 }
 
-.logout li a:hover,
-.logout li a:focus,
-.logout li a:active {
+.logout-link li a:hover,
+.logout-link li a:focus,
+.logout-link li a:active {
   color: #000;
-  font-size: 1.3em;
 }
 
 /* MENU - NAVBAR LEFT MENU */
+.menu-list li {
+  -webkit-transition: all .55s;
+  -moz-transition: all .55s;
+  -ms-transition: all .55s;
+  -o-transition: all .55s;
+  transition: all .55s;
+}
+
+.menu-list li {
+  font-size: 1.2em;
+  padding: 20px 40px;
+}
+
+.menu-list li:hover,
+.menu-list li:focus,
+.menu-list li:active {
+  background-color: #fff;
+  color: #000;
+}
+
+.menu-list li:nth-child(-n+2) {
+  border-bottom: 1px solid #fff;
+}
