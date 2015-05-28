@@ -28,6 +28,7 @@ body {
   background-color: #666666;
 }
 
+
 /* NAVBAR HOMEPAGE */
 #nav-home {
   padding: 20px 0;
@@ -89,7 +90,12 @@ body {
   border: 1px solid transparent;
 }
 
+
 /* SUB - Login Dropdown Form */
+.form-control {
+  border-radius: 0;
+}
+
 #dropdown-login {
   padding: 20px;
   background: url('opaque_bg.png') center center no-repeat;
@@ -102,22 +108,33 @@ body {
 }
 
 .login-input input {
+  width: 300px;
   padding: 5px;
+}
+
+.login-input input,
+.create-form input,
+.create-form select {
   font-size: 1.2em;
   outline: 0;
   color: #000;
-  width: 300px;
   border: 1px solid #000;
-  -webkit-transition: background-color, border .4s;
-  -moz-transition: background-color, border .4s;
-  -ms-transition: background-color, border .4s;
-  -o-transition: background-color, border .4s;
-  transition: background-color, border .4s;
+  -webkit-transition: background-color .4s;
+  -moz-transition: background-color .4s;
+  -ms-transition: background-color .4s;
+  -o-transition: background-color .4s;
+  transition: background-color .4s;
 }
 
 .login-input input:hover,
+.login-input input:focus,
 .login-input input:active,
-.login-input input:focus {
+.create-form input:hover,
+.create-form input:focus,
+.create-form input:active,
+.create-form select:hover,
+.create-form select:focus,
+.create-form select:active {
   border: 1px solid #fff;
   background-color: transparent;
   color: #fff;
@@ -125,13 +142,17 @@ body {
 
 .login-btn .btn input,
 .login-btn .btn input:focus,
-.login-btn .btn input:active {
+.login-btn .btn input:active,
+.create-btn .btn input,
+.create-btn .btn input:focus,
+.create-btn .btn input:active {
   background-color: transparent;
   border: none;
   outline: 0;
 }
 
-.login-btn .btn {
+.login-btn .btn,
+.create-btn .btn {
   background-color: #fff;
   border-radius: 0;
   color: #000;
@@ -144,13 +165,17 @@ body {
 
 .login-btn .btn:hover,
 .login-btn .btn:focus,
-.login-btn .btn:active {
+.login-btn .btn:active,
+.create-btn .btn:hover,
+.create-btn .btn:focus,
+.create-btn .btn:active {
   background-color: transparent;
   border: 1px solid #fff;
   color: #fff;
 }
 
-/* NAVBAR LOGIN */
+
+/* NAVBAR LOGGED IN */
 .logout {
   padding: 0 5px;
   border: 1px solid #ddd;
@@ -213,6 +238,7 @@ body {
   color: #000;
 }
 
+
 /* MENU - NAVBAR LEFT MENU */
 .menu-list li {
   -webkit-transition: all .55s;
@@ -236,4 +262,47 @@ body {
 
 .menu-list li:nth-child(-n+2) {
   border-bottom: 1px solid #fff;
+}
+
+
+/* REGISTER FORM MODAL */
+.register-modal {
+  background: url('opaque_bg.png') center center no-repeat;
+}
+
+.register-modal h2,
+.register-modal h5,
+.close span {
+  color: #fff;
+  padding: 20px;
+}
+
+.register-modal h2 {
+  margin-top: 20px;
+}
+
+.auth-login{
+  padding: 0 10px;
+}
+
+.google-btn i,
+.facebook-btn i {
+  padding: 8px 3px;
+}
+
+.btn-social {
+  padding: 12px;
+  padding-left: 44px;
+  font-size: 1.2em;
+  -webkit-transition: all .55s;
+  -moz-transition: all .55s;
+  -ms-transition: all .55s;
+  -o-transition: all .55s;
+  transition: all .55s;
+}
+
+.auth-login a:hover,
+.auth-login a:focus,
+.auth-login a:active {
+  text-decoration: none;
 }
