@@ -1,3 +1,8 @@
-= render 'nav_home'
-%h1 Welcome to Forecast.
-%p Today is <strong>#{ Time.now }</strong>
+#home
+  = render 'nav_home'
+  .container
+    .row
+      .text-center.logo
+        %h1 Forecast
+      .quote.text-center.col-md-5
+        %p “The pessimist complains about the wind; the optimist expects it to change; the realist adjusts the sails.” <br> – William Arthur Ward

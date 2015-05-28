@@ -95,7 +95,7 @@
                     %input{type: 'button', 'data-dismiss' => 'modal', value: 'Cancel'}
                   .btn.pull-right
                     = f.submit 'CREATE'
-            .col-md-4.auth-login.text-center
+            .col-md-5.auth-login.text-center
               %h5 Or Login with...
               = link_to(guest_omniauth_authorize_path(:google_oauth2), class: 'google-btn') do
                 .btn-social.btn-google-plus

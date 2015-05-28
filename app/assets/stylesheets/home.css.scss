@@ -25,7 +25,16 @@ ul {
 
 body {
   font-family: 'QuickSand', sans-serif;
-  background-color: #666666;
+}
+
+
+/* HOME BACKGROUND IMAGE */
+#home {
+  background: url('home_bg_overlay_1.jpg') center center no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 
@@ -305,4 +314,28 @@ body {
 .auth-login a:focus,
 .auth-login a:active {
   text-decoration: none;
+}
+
+
+/* HOME TEXT */
+#home {
+  color: #fff;
+}
+
+.logo h1 {
+  font-size: 13em;
+  font-family: 'Admiration Pains', 'QuickSand', courier, monospace;
+  margin: 60px auto 40px;
+  padding: 50px 5px;
+}
+
+.quote {
+  padding: 20px;
+  margin: 0 auto 40px;
+  float: none;
+  background: url('opaque_bg.png') center center no-repeat;
+}
+
+.quote p {
+  font-size: 1.3em;
 }
