@@ -29,16 +29,18 @@ body {
 
 
 /* HOME BACKGROUND IMAGE */
-#home {
+#home-bg {
   background: url('home_bg_overlay_1.jpg') center center no-repeat;
+  background-attachment: fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
 
-#home-in {
+#home-in-bg {
   background: url('home_bg_overlay_2.jpg') center center no-repeat;
+  background-attachment: fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -349,7 +351,7 @@ body {
 
 /* HOME FOOTER */
 footer {
-  padding-top: 218px;
+  padding-top: 180px;
 }
 
 footer ul li {

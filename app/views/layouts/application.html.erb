@@ -15,7 +15,7 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body <%= " id=#{@home_in_id} " if guest_signed_in? %> <%= " id=#{@home_id} " unless guest_signed_in? %>>
   <%= yield %>
 </body>
 </html>
