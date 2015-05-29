@@ -1,8 +1,20 @@
-#home
-  = render 'nav_home'
-  .container
-    .row
-      .text-center.logo
-        %h1 Forecast
-      .quote.text-center.col-md-5
-        %p “The pessimist complains about the wind; the optimist expects it to change; the realist adjusts the sails.” <br> – William Arthur Ward
+-if guest_signed_in?
+  #home-in
+    = render 'nav_home'
+    .container
+      .row
+        .text-center.logo
+          %h1 Forecast
+        .quote.text-center.col-md-5
+          %p “Both optimists and pessimists contribute to our society.  The optimist invents the airplane and the pessimist the parachute.” <br> – Gil Stern
+    = render 'footer_home'
+- else
+  #home
+    = render 'nav_home'
+    .container
+      .row
+        .text-center.logo
+          %h1 Forecast
+        .quote.text-center.col-md-5
+          %p “The pessimist complains about the wind; the optimist expects it to change; the realist adjusts the sails.” <br> – William Arthur Ward
+    = render 'footer_home'

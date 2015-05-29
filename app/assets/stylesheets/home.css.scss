@@ -37,6 +37,14 @@ body {
   background-size: cover;
 }
 
+#home-in {
+  background: url('home_bg_overlay_2.jpg') center center no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 
 /* NAVBAR HOMEPAGE */
 #nav-home {
@@ -318,7 +326,8 @@ body {
 
 
 /* HOME TEXT */
-#home {
+#home,
+#home-in{
   color: #fff;
 }
 
@@ -338,4 +347,18 @@ body {
 
 .quote p {
   font-size: 1.3em;
+}
+
+
+/* HOME FOOTER */
+footer {
+  padding-top: 168px;
+}
+
+footer ul li {
+  font-size: 1.5em;
+  display: inline-block;
+  padding-top: 20px;
+  margin-right: 40px;
+  bottom: 0;
 }
