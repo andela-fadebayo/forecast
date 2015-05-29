@@ -331,11 +331,9 @@ body {
   color: #fff;
 }
 
-.logo h1 {
-  font-size: 13em;
-  font-family: 'Admiration Pains', 'QuickSand', courier, monospace;
-  margin: 60px auto 40px;
-  padding: 50px 5px;
+.logo img {
+  max-width: 100% !important;
+  height: auto;
 }
 
 .quote {
@@ -352,7 +350,7 @@ body {
 
 /* HOME FOOTER */
 footer {
-  padding-top: 168px;
+  padding-top: 188px;
 }
 
 footer ul li {
