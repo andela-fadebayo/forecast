@@ -56,6 +56,9 @@ gem 'omniauth-facebook'
 # Use Figaro to store environment secrets
 gem 'figaro'
 
+# Use Puma web server for Heroku deployment
+gem 'puma'
+
 group :development, :test do
   # Use Rspec for testing
   gem 'rspec-rails', '~> 3.0'
