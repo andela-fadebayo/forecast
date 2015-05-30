@@ -30,7 +30,7 @@ body {
 
 /* HOME BACKGROUND IMAGE */
 #home-bg {
-  background: url('home_bg_overlay_1.jpg') center center no-repeat;
+  background: image-url('home_bg_overlay_1.jpg') center center no-repeat;
   background-attachment: fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -39,7 +39,7 @@ body {
 }
 
 #home-in-bg {
-  background: url('home_bg_overlay_2.jpg') center center no-repeat;
+  background: image-url('home_bg_overlay_2.jpg') center center no-repeat;
   background-attachment: fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -116,7 +116,7 @@ body {
 
 #dropdown-login {
   padding: 20px;
-  background: url('opaque_bg.png') center center no-repeat;
+  background: image-url('opaque_bg.png') center center no-repeat;
 }
 
 #dropdown-login h2 {
@@ -285,7 +285,7 @@ body {
 
 /* REGISTER FORM MODAL */
 .register-modal {
-  background: url('opaque_bg.png') center center no-repeat;
+  background: image-url('opaque_bg.png') center center no-repeat;
 }
 
 .register-modal h2,
@@ -340,7 +340,7 @@ body {
   padding: 20px;
   margin: 0 auto 40px;
   float: none;
-  background: url('opaque_bg.png') center center no-repeat;
+  background: image-url('opaque_bg.png') center center no-repeat;
 }
 
 .quote p {
