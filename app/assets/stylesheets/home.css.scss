@@ -25,6 +25,7 @@ ul {
 
 body {
   font-family: 'QuickSand', sans-serif;
+  background-color: #aaa;
 }
 
 
@@ -268,7 +269,7 @@ body {
 
 .menu-list li {
   font-size: 1.2em;
-  padding: 20px 40px;
+  padding: 20px 20px;
 }
 
 .menu-list li:hover,
@@ -280,6 +281,21 @@ body {
 
 .menu-list li:nth-child(-n+2) {
   border-bottom: 1px solid #fff;
+}
+
+.menu-list li a {
+  color: #fff;
+  -webkit-transition: all .55s;
+  -moz-transition: all .55s;
+  -ms-transition: all .55s;
+  -o-transition: all .55s;
+  transition: all .55s;
+}
+
+.menu-list li a:hover,
+.menu-list li a:focus,
+.menu-list li a:active {
+  color: #000;
 }
 
 
