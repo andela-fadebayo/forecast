@@ -59,6 +59,9 @@ gem 'figaro'
 # Use Puma web server for Heroku deployment
 gem 'puma'
 
+# Use Factory Girl for test fixtures
+gem 'factory_girl_rails', '~> 4.0'
+
 group :development, :test do
   # Use Rspec for testing
   gem 'rspec-rails', '~> 3.0'
