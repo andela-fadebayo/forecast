@@ -1,2 +1,22 @@
 = render 'home/nav_home'
+= render 'shared/notification'
 %h5 If you're here, then you made it to ShopQuik todo_lists index page!
+
+#my-shopping-list
+  %h2 My Shopping List
+  #month-list
+    %h3 Select Month
+    - @todo_lists.each do |td_list|
+      = link_to td_list.title, td_list
+      %p= td_list.description
+
+
+    %a.btn{type: 'button', 'data-toggle' => 'modal', 'data-target' => '#createListModal'}
+      CREATE NEW LIST
+
+  #list-items
+    %h4 2015 January
+
+
+#createListModal.modal.fade{tabindex: '-1', role: 'dialog', 'aria-labelledby' => 'registerModalLabel', 'aria-hidden' => 'true'}
+  = render 'create_form'
