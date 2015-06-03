@@ -4,15 +4,20 @@ class ShopquikTodoListsController < ApplicationController
 
   def index
     @todo_lists = Shopquik::TodoList.all
-    @todo_list = Shopquik::TodoList.new
   end
 
   def show
+    respond_to do |format|
+      format.js
+    end
   end
 
-  # def new
-  #   @todo_list = Shopquik::TodoList.new
-  # end
+  def new
+    @todo_list = Shopquik::TodoList.new
+    respond_to do |format|
+      format.js
+    end
+  end
 
   def create
     @todo_list = Shopquik::TodoList.new(todo_list_params)

@@ -7,16 +7,12 @@
   #month-list
     %h3 Select Month
     - @todo_lists.each do |td_list|
-      = link_to td_list.title, td_list
+      = link_to td_list.title, td_list, remote: true
       %p= td_list.description
 
-
-    %a.btn{type: 'button', 'data-toggle' => 'modal', 'data-target' => '#createListModal'}
-      CREATE NEW LIST
+    = link_to 'CREATE NEW LIST', new_shopquik_todo_list_path, remote: true
 
   #list-items
-    %h4 2015 January
+    %p Click a list to see and add items to the list.
 
-
-#createListModal.modal.fade{tabindex: '-1', role: 'dialog', 'aria-labelledby' => 'registerModalLabel', 'aria-hidden' => 'true'}
-  = render 'create_form'
+#newListModal.modal.fade{role: 'dialog', 'aria-labelledby' => "myModalLabel"}

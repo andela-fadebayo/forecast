@@ -30,12 +30,12 @@ describe ShopquikTodoListsController, type: :controller do
     let(:list) { create(:shopquik_todo_list) }
 
     it 'assigns the requested todo_list to @todo_list' do
-      get :show, id: list
+      xhr :get, :show, id: list
       expect(assigns(:todo_list)).to eq(list)
     end
 
     it 'renders #show view' do
-      get :show, id: list
+      xhr :get, :show, id: list
       expect(response).to render_template :show
     end
   end
