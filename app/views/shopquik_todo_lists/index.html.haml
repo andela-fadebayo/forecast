@@ -7,6 +7,8 @@
   #month-list
     %h3 Select Month
     - @todo_lists.each do |td_list|
+      = link_to 'Edit', edit_shopquik_todo_list_path(td_list), remote: true
+      = link_to 'Delete', shopquik_todo_list_path(td_list), method: :delete, data: { confirm: "You're about to delete a list. Are you sure?" }
       = link_to td_list.title, td_list, remote: true
       %p= td_list.description
 
