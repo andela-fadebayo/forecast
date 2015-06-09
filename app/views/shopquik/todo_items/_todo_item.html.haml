@@ -2,3 +2,4 @@
   %li= todo_item.item
   %li= todo_item.quantity
   %li= todo_item.cost
+  %li= link_to 'Delete', shopquik_todo_list_shopquik_todo_item_path(@todo_list, todo_item.id), method: :delete, data: { confirm: 'Are you sure?' }

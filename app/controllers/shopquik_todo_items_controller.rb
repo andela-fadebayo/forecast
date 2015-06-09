@@ -8,6 +8,15 @@ class ShopquikTodoItemsController < ApplicationController
     redirect_to @todo_list
   end
 
+  def destroy
+    if @todo_item.destroy
+      flash[:success] = 'List item was deleted.'
+      redirect_to shopquik_todo_lists_path
+    else
+      flash[:error] = 'List item could not be deleted.'
+    end
+  end
+
 
   private
 
