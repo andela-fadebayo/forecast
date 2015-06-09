@@ -1,0 +1,9 @@
+= form_for([@todo_list, @todo_list.shopquik_todo_items.build], remote: true) do |t|
+  .field
+    = t.text_field :item, placeholder: 'Item'
+  .field
+    = t.number_field :quantity, placeholder: 'Quantity'
+  .field
+    = t.number_field :cost, placeholder: 'N Cost'
+  .actions
+    = t.submit 'ADD'
