@@ -1,0 +1,13 @@
+%nav#nav-others.navbar.navbar-default
+  .container-fluid
+    .navbar-header
+      %button.navbar-toggle.collapsed{type: 'button', 'data-toggle' => 'collapse', 'data-target' => '#bs-example-navbar-collapse-1'}
+        %i.fa.fa-bars
+      #logo-text= link_to 'forecast', root_path
+    .collapse.navbar-collapse#bs-example-navbar-collapse-1
+      %ul.nav.navbar-nav.navbar-right.sub-ul
+        - if guest_signed_in?
+          %li.sub-links= link_to 'BUDGET', root_path
+          %li.sub-links= link_to 'SHOPQUIK', shopquik_todo_lists_path
+          %li.sub-links= link_to 'TRACK', root_path
+          %li.s-logout= link_to 'LOGOUT', destroy_guest_session_path, method: :delete
