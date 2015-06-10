@@ -1,0 +1,25 @@
+.modal-dialog
+  .modal-content.register-modal
+    .modal-header
+      %btn.close{type: 'button', 'data-dismiss' => 'modal', 'aria-label' => 'Close'}
+        %span{'aria-hidden' => true} &times;
+      %h2.text-center New List
+    .modal-body
+      .container-fluid
+        .row
+          .create-list-form
+            = form_for(@todo_list) do |td|
+              - if @todo_list.errors.any?
+                #error_explanation
+                  %h2
+                    = pluralize(@todo_list.errors.count, 'error')
+                    Prohibited this todo_list from being saved:
+                  %ul
+                    - @todo_list.errors.full_messages.each do |msg|
+                      %li= msg
+              .field
+                = td.text_field :title, placeholder: 'List Title (YYYY Month)'
+              .field
+                = td.text_area :description, placeholder: 'List Description'
+              .actions
+                = td.submit

@@ -1,0 +1,21 @@
+= render 'home/nav_home'
+= render 'shared/notification'
+.container-fluid
+  .row
+    #my-shopping-list.col-md-12
+      %h2 My Shopping List
+      #month-list.col-md-6
+        %h3 Select Month
+        - @todo_lists.each do |td_list|
+          %ul.lists
+            %li
+              %h4= link_to td_list.title, td_list, remote: true
+            %li= link_to 'Edit', edit_shopquik_todo_list_path(td_list), remote: true
+            %li= link_to 'Delete', shopquik_todo_list_path(td_list), method: :delete, data: { confirm: "You're about to delete a list. Are you sure?" }
+
+        = link_to 'CREATE NEW LIST', new_shopquik_todo_list_path, remote: true
+
+      #list-items.col-md-6
+        %p Click a list to see and add items to the list.
+
+#newListModal.modal.fade{role: 'dialog', 'aria-labelledby' => "myModalLabel"}

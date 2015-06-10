@@ -1,9 +1,15 @@
 Rails.application.routes.draw do
+  # routes for devise and omniauth authentication
   devise_for :guests, :controllers => { registrations: 'registrations', omniauth_callbacks: "guests/omniauth_callbacks" } do
     get '/guests/auth/:provider', to: 'guests/omniauth_callbacks#passthru'
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
+
+  # routes for shopquik items and lists
+  resources :shopquik_todo_lists do
+    resources :shopquik_todo_items
+  end
 
   # You can have the root of your site routed with "root"
   root 'home#index'

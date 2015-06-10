@@ -59,9 +59,14 @@ gem 'figaro'
 # Use Puma web server for Heroku deployment
 gem 'puma'
 
+# Use Factory Girl for test fixtures
+gem 'factory_girl_rails', '~> 4.0'
+
 group :development, :test do
   # Use Rspec for testing
   gem 'rspec-rails', '~> 3.0'
+
+  gem 'pry'
 
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
