@@ -3,7 +3,7 @@ class ShopquikTodoListsController < ApplicationController
   before_action :set_todo_list, only: [:show, :edit, :update, :destroy]
 
   def index
-    @todo_lists = Shopquik::TodoList.all.order("updated_at DESC")
+    @todo_lists = current_guest.shopquik_todo_lists.order("updated_at DESC")
   end
 
   def show
@@ -20,7 +20,7 @@ class ShopquikTodoListsController < ApplicationController
   end
 
   def create
-    @todo_list = Shopquik::TodoList.new(todo_list_params)
+    @todo_list = current_guest.shopquik_todo_lists.new(todo_list_params)
 
     respond_to do |format|
       if @todo_list.save
