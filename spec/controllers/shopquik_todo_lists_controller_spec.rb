@@ -19,7 +19,7 @@ describe ShopquikTodoListsController, type: :controller do
     end
 
     it 'gets all todo_lists' do
-      lists = create_list(:shopquik_todo_list, 5).reverse!
+      lists = create_list(:shopquik_todo_list, 5, guest: guest).reverse!
 
       get :index
       expect(assigns(:todo_lists)).to eq(lists)

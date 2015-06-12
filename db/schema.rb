@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150530213618) do
+ActiveRecord::Schema.define(version: 20150611135601) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -68,8 +68,12 @@ ActiveRecord::Schema.define(version: 20150530213618) do
     t.text     "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "guest_id"
   end
+
+  add_index "shopquik_todo_lists", ["guest_id"], name: "index_shopquik_todo_lists_on_guest_id", using: :btree
 
   add_foreign_key "providers", "guests"
   add_foreign_key "shopquik_todo_items", "shopquik_todo_lists"
+  add_foreign_key "shopquik_todo_lists", "guests"
 end
