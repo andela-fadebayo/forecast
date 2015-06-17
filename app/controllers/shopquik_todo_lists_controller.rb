@@ -3,6 +3,7 @@ class ShopquikTodoListsController < ApplicationController
   before_action :set_todo_list, only: [:show, :edit, :update, :destroy]
 
   def index
+    @title = 'Shopquik Todo'
     @todo_lists = current_guest.shopquik_todo_lists.order("updated_at DESC")
   end
 

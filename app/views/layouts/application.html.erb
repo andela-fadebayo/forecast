@@ -9,13 +9,13 @@
 
   <%= favicon_link_tag 'forecast_fav.png' %>
 
-  <title>Forecast</title>
+  <title><%= @title %> | Forecast</title>
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body <%= " id=#{@home_in_id} " if guest_signed_in? %> <%= " id=#{@home_id} " unless guest_signed_in? %>>
+<body <%= "id=#{@home_bg}" %>>
   <%= yield %>
 </body>
 </html>

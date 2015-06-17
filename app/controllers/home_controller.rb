@@ -1,6 +1,11 @@
 class HomeController < ApplicationController
   def index
-    @home_id = "home-bg"
-    @home_in_id = "home-in-bg"
+    if guest_signed_in?
+      @home_bg = 'home-in-bg'
+      @title = "Welcome, #{current_guest.first_name}"
+    else
+      @title = 'Home'
+      @home_bg = 'home-bg'
+    end
   end
 end
