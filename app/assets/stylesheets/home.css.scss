@@ -257,16 +257,13 @@ body {
 
 /* MENU - NAVBAR LEFT MENU */
 .menu-list li {
+  font-size: 1.2em;
+  padding: 10px;
   -webkit-transition: all .55s;
   -moz-transition: all .55s;
   -ms-transition: all .55s;
   -o-transition: all .55s;
   transition: all .55s;
-}
-
-.menu-list li {
-  font-size: 1.2em;
-  padding: 20px 20px;
 }
 
 .menu-list li:hover,
@@ -292,6 +289,11 @@ body {
 .menu-list li a:hover,
 .menu-list li a:focus,
 .menu-list li a:active {
+  color: #000;
+}
+
+.dropdown-menu > li > a:hover {
+  background-color: transparent;
   color: #000;
 }
 
@@ -367,9 +369,9 @@ footer {
 }
 
 footer ul li {
-  font-size: 1.5em;
+  font-size: 1.3em;
   display: inline-block;
   padding-top: 20px;
-  margin-right: 40px;
+  margin-right: 20px;
   bottom: 0;
 }
