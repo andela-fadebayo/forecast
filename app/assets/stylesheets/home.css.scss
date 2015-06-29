@@ -66,7 +66,7 @@ body {
 .menu:focus,
 .menu:active {
   background-color: transparent;
-  border: 1px solid #ddd;
+  border: 1px solid #7d7b7e; // Titanium
   padding-right: 15px;
   padding-left: 15px;
 }
@@ -74,7 +74,7 @@ body {
 .register:hover,
 .login:hover,
 .menu:hover {
-  border-color: #fff;
+  border-color: #000;
 }
 
 .login {
@@ -82,27 +82,27 @@ body {
 }
 
 .navbar-default .navbar-nav > li > a {
-  color: #ddd;
+  color: #7d7b7e;
 }
 
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus,
 .navbar-default .navbar-nav > li > a:active {
-  color: #fff;
+  color: #000;
 }
 
 .register a,
 .login a,
 .menu a {
   font-size: 1.3em;
-  color: #ddd;
+  color: #7d7b7e;
 }
 
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
   background-color: transparent;
-  color: #fff;
+  color: #000;
   border: 1px solid transparent;
 }
 
