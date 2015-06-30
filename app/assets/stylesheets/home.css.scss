@@ -48,6 +48,15 @@ body {
   background-size: cover;
 }
 
+#shopquik-bg {
+  background: image-url('home_bg_overlay_sq.jpg') center center no-repeat;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 
 /* NAVBAR HOMEPAGE */
 #nav-home {
@@ -194,14 +203,14 @@ body {
 /* NAVBAR LOGGED IN */
 .logout {
   padding: 0 5px;
-  border: 1px solid #ddd;
+  border: 1px solid #7d7b7e;
   border-radius: .5em;
 }
 
 .logout:hover,
 .logout:focus,
 .logout:active {
-  border: 1px solid #fff;
+  border: 1px solid #000;
 }
 
 .name {
@@ -214,9 +223,9 @@ body {
 
 .logout-link,
 .menu-list {
-  color: #fff;
+  color: #7d7b7e;
   background-color: transparent;
-  border: 1px solid #fff;
+  border: 1px solid #7d7b7e;
   border-radius: 0;
   padding-top: 0;
   padding-bottom: 0;
@@ -239,7 +248,7 @@ body {
 }
 
 .logout-link li a {
-  color: #fff;
+  color: #7d7b7e;
   font-size: 1.2em;
   -webkit-transition: all .55s;
   -moz-transition: all .55s;
@@ -274,11 +283,11 @@ body {
 }
 
 .menu-list li:nth-child(-n+2) {
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #7d7b7e;
 }
 
 .menu-list li a {
-  color: #fff;
+  color: #7d7b7e;
   -webkit-transition: all .55s;
   -moz-transition: all .55s;
   -ms-transition: all .55s;
@@ -347,13 +356,13 @@ body {
 }
 
 .logo img {
-  max-width: 100% !important;
+  max-width: 80% !important;
   height: auto;
 }
 
 .quote {
   padding: 20px;
-  margin: 0 auto 40px;
+  margin: 40px auto;
   float: none;
   background: image-url('opaque_bg.png') center center no-repeat;
 }

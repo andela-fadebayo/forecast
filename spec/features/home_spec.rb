@@ -9,7 +9,7 @@ feature 'Homepage exists' do
     expect(page).to have_content('Register')
     expect(page).to have_content('Login')
     expect(page).to have_content('The pessimist complains about the wind; the optimist expects it to change; the realist adjusts the sails.')
-    expect(page).to have_content('BUDGET TRACK SHOPQUIK ...never swim naked')
+    expect(page).to have_content('BUDGET SHOP TRACK ...never swim naked')
 
     expect(page).to have_content('Create An Account')
     expect(page).to have_content('Or Login with...')
@@ -23,7 +23,7 @@ feature 'Homepage exists' do
 
     expect(page).to have_content('Menu')
     expect(page).to have_content('BUDGET')
-    expect(page).to have_content('SHOPQUIK')
+    expect(page).to have_content('SHOP')
     expect(page).to have_content('TRACK')
     expect(page).to have_content('Hi, Jade Kent')
     expect(page).to have_content('LOGOUT')
