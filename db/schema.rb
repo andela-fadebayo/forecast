@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150611135601) do
+ActiveRecord::Schema.define(version: 20150627195937) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -59,6 +59,7 @@ ActiveRecord::Schema.define(version: 20150611135601) do
     t.integer  "shopquik_todo_list_id"
     t.datetime "created_at",            null: false
     t.datetime "updated_at",            null: false
+    t.datetime "completed_at"
   end
 
   add_index "shopquik_todo_items", ["shopquik_todo_list_id"], name: "index_shopquik_todo_items_on_shopquik_todo_list_id", using: :btree

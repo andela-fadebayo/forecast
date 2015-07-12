@@ -8,7 +8,11 @@ Rails.application.routes.draw do
 
   # routes for shopquik items and lists
   resources :shopquik_todo_lists do
-    resources :shopquik_todo_items
+    resources :shopquik_todo_items do
+      member do
+        patch :complete
+      end
+    end
   end
 
   # You can have the root of your site routed with "root"

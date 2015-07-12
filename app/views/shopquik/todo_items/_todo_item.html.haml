@@ -1,5 +1,60 @@
-%ul.items
-  %li= todo_item.item
-  %li= todo_item.quantity
-  %li= todo_item.cost
-  %li= link_to 'Delete', shopquik_todo_list_shopquik_todo_item_path(@todo_list, todo_item.id), method: :delete, data: { confirm: 'Are you sure?' }
+-#%ul.items
+-#  %li= link_to 'Mark as Complete', complete_shopquik_todo_list_shopquik_todo_item_path(@todo_list, todo_item.id), method: :patch, remote: true
+-#  %li= todo_item.item
+-#  %li= todo_item.quantity
+-#  %li= todo_item.cost
+-#  %li= link_to 'Delete', shopquik_todo_list_shopquik_todo_item_path(@todo_list, todo_item.id), method: :delete, data: { confirm: 'Are you sure?' }, remote: true
+
+-#- if todo_item.completed?
+-#  .complete
+-#    %ul.items
+-#      %li= link_to 'Mark as Complete', complete_shopquik_todo_list_shopquik_todo_item_path(@todo_list, todo_item.id), method: :patch, remote: true
+-#      %li= todo_item.item
+-#      %li= todo_item.quantity
+-#      %li= todo_item.cost
+-#      %li= link_to 'Delete', shopquik_todo_list_shopquik_todo_item_path(@todo_list, todo_item.id), method: :delete, data: { confirm: 'Are you sure?' }, remote: true
+-#- else
+-#  .complete
+-#    %ul.items
+-#      %li Item is not complete
+
+.row
+  - if todo_item.completed?
+    .complete
+      %ul.items
+        %li{"data-toggle" => "tooltip", "data-placement" => "top", title: "Item Completed"}
+          = link_to complete_shopquik_todo_list_shopquik_todo_item_path(@todo_list, todo_item.id), method: :patch, remote: true do
+            %i.fa.fa-check{:style => "opacity: 0.4;"}
+        %li
+          %p{:style => "opacity: 0.4;"}
+            %strike= todo_item.item
+        %li
+          %p{:style => "opacity: 0.4;"}
+            %strike= todo_item.quantity
+        %li
+          %p{:style => "opacity: 0.4;"}
+            %strike= todo_item.cost
+        %li{"data-toggle" => "tooltip", "data-placement" => "top", title: "Delete"}
+          = link_to shopquik_todo_list_shopquik_todo_item_path(@todo_list, todo_item.id), method: :delete, data: { confirm: "Are you sure?" }, remote: true do
+            %i.fa.fa-trash
+  - else
+    .complete
+      %ul.items
+        %li{"data-toggle" => "tooltip", "data-placement" => "top", title: "Mark As Complete"}
+          = link_to complete_shopquik_todo_list_shopquik_todo_item_path(@todo_list, todo_item.id), method: :patch, remote: true do
+            %i.fa.fa-check
+        %li
+          %p= todo_item.item
+        %li
+          %p= todo_item.quantity
+        %li
+          %p= todo_item.cost
+        %li{"data-toggle" => "tooltip", "data-placement" => "top", title: "Delete"}
+          = link_to shopquik_todo_list_shopquik_todo_item_path(@todo_list, todo_item.id), method: :delete, data: { confirm: "Are you sure?" }, remote: true do
+            %i.fa.fa-trash
+
+
+:javascript
+  $(document).ready(function() {
+    $('[data-toggle="tooltip"]').tooltip();
+  });
