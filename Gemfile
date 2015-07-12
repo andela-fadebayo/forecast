@@ -62,6 +62,10 @@ gem 'puma'
 # Use Factory Girl for test fixtures
 gem 'factory_girl_rails', '~> 4.0'
 
+group :development do
+  gem 'better_errors'
+end
+
 group :development, :test do
   # Use Rspec for testing
   gem 'rspec-rails', '~> 3.0'
@@ -84,6 +88,7 @@ group :test do
   gem 'capybara'
   gem 'capybara-webkit'
   gem 'selenium-webdriver'
+  gem 'simplecov', :require => false
 end
 
 group :production do
