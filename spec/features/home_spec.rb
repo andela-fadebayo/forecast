@@ -19,7 +19,9 @@ feature 'Homepage exists' do
     OmniAuth.config.test_mode = true
     set_valid_google_omniauth
 
-    click_on 'Google'
+    within '.auth-dropdown-login' do
+      click_on 'Google'
+    end
 
     expect(page).to have_content('Menu')
     expect(page).to have_content('BUDGET')
@@ -34,7 +36,9 @@ feature 'Homepage exists' do
     OmniAuth.config.test_mode = true
     set_valid_facebook_omniauth
 
-    click_on 'Facebook'
+    within '.auth-dropdown-login' do
+      click_on 'Facebook'
+    end
 
     expect(page).to have_content('Hi, Joe Bloggs')
     expect(page).to have_content('LOGOUT')
