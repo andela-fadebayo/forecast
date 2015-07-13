@@ -37,14 +37,30 @@
               = form_for("guest", url: guest_session_path) do |f|
                 %li
                   .form-group
-                    .login-input= f.email_field :email, autofocus: true, placeholder: 'E-mail', class: 'form-control'
-                %br/
+                    .input-group
+                      %span.input-group-addon
+                        %i.fa.fa-envelope-o.fa-fw
+                      .login-input= f.email_field :email, autofocus: true, placeholder: 'E-mail', class: 'form-control'
+                %br
                 %li
                   .form-group
-                    .login-input= f.password_field :password, autocomplete: 'off', placeholder: 'Password', class: 'form-control'
+                    .input-group
+                      %span.input-group-addon
+                        %i.fa.fa-key.fa-fw
+                      .login-input= f.password_field :password, autocomplete: 'off', placeholder: 'Password', class: 'form-control'
                 %br
                 %li.login-btn
                   .btn= f.submit 'LOG IN'
+
+              .col-md-12.auth-dropdown-login.text-center
+                %h5 Or Login with...
+                = link_to(guest_omniauth_authorize_path(:google_oauth2), class: 'google-btn') do
+                  .login-social.btn-google-plus
+                    Google
+                %h5 or
+                = link_to(guest_omniauth_authorize_path(:facebook), class: 'facebook-btn') do
+                  .login-social.btn-facebook
+                    Facebook
 
 #registerModal.modal.fade{tabindex: '-1', role: 'dialog', 'aria-labelledby' => 'registerModalLabel', 'aria-hidden' => 'true'}
   .modal-dialog
@@ -96,7 +112,7 @@
                   .btn.pull-right
                     = f.submit 'CREATE'
             .col-md-5.auth-login.text-center
-              %h5 Or Login with...
+              %h5 Or Register with...
               = link_to(guest_omniauth_authorize_path(:google_oauth2), class: 'google-btn') do
                 .btn-social.btn-google-plus
                   %i.fa.fa-google-plus

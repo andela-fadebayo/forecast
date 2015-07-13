@@ -132,8 +132,22 @@ body {
   margin-bottom: 40px;
 }
 
+@media (min-width: 768px) {
+  .input-group {
+    width: 300px;
+  }
+}
+
+@media (max-width: 767px) {
+  .login,
+  .login:hover,
+  .login:active,
+  .login:focus {
+    border: none;
+  }
+}
+
 .login-input input {
-  width: 300px;
   padding: 5px;
 }
 
@@ -197,6 +211,28 @@ body {
   background-color: transparent;
   border: 1px solid #fff;
   color: #fff;
+}
+
+.auth-dropdown-login {
+  padding: 10px;
+  border-top: 1px solid #999;
+  margin-top: 30px;
+}
+
+.login-social {
+  padding: 5px;
+  font-size: 1em;
+  -webkit-transition: all .55s;
+  -moz-transition: all .55s;
+  -ms-transition: all .55s;
+  -o-transition: all .55s;
+  transition: all .55s;
+}
+
+.auth-dropdown-login a:hover,
+.auth-dropdown-login a:focus,
+.auth-dropdown-login a:active {
+  text-decoration: none;
 }
 
 
@@ -323,7 +359,7 @@ body {
   margin-top: 20px;
 }
 
-.auth-login{
+.auth-login {
   padding: 0 10px;
 }
 
