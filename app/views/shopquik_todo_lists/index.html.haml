@@ -10,12 +10,24 @@
           %ul.lists
             %li
               %h4= link_to td_list.title, td_list, remote: true
-            %li= link_to 'Edit', edit_shopquik_todo_list_path(td_list), remote: true
-            %li= link_to 'Delete', shopquik_todo_list_path(td_list), method: :delete, data: { confirm: "You're about to delete a list. Are you sure?" }
+            %li{"data-toggle" => "tooltip", "data-placement" => "top", title: "Edit List"}
+              = link_to edit_shopquik_todo_list_path(td_list), remote: true do
+                %i.fa.fa-pencil-square-o
+            %li{"data-toggle" => "tooltip", "data-placement" => "right", title: "Delete List"}
+              = link_to shopquik_todo_list_path(td_list), method: :delete, data: { confirm: "You're about to delete a list. Are you sure?" } do
+                %i.fa.fa-trash-o
 
-        = link_to 'CREATE NEW LIST', new_shopquik_todo_list_path, remote: true
+        %span{"data-toggle" => "tooltip", "data-placement" => "bottom", title: "Create A New List"}
+          = link_to new_shopquik_todo_list_path, remote: true do
+            %i.fa.fa-list-ol
+              CREATE NEW LIST
 
       #list-items.col-md-6
         %p Click a list to see and add items to the list.
 
 #newListModal.modal.fade{role: 'dialog', 'aria-labelledby' => "myModalLabel"}
+
+:javascript
+  $(document).ready(function() {
+    $('[data-toggle="tooltip"]').tooltip();
+  });
