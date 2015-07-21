@@ -1,0 +1,27 @@
+// PROFILE DIV
+
+$glacier_gray: #C6CCCC;
+
+#profile {
+  padding: 20px 10px;
+  background-color: $glacier-gray;
+}
+
+#profile-picture img {
+  width: 60%;
+}
+
+#guest-details {
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 20px;
+}
+
+#guest-details p:first-of-type {
+  text-transform: uppercase;
+}
+
+#guest-details p:last-of-type {
+  font-size: .8em;
+  color: #696969;
+}
