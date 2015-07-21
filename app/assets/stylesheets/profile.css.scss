@@ -1,6 +1,7 @@
 // PROFILE DIV
 
 $glacier_gray: #C6CCCC;
+$theme-colour: #442102;
 
 #profile {
   padding: 20px 10px;
@@ -24,4 +25,73 @@ $glacier_gray: #C6CCCC;
 #guest-details p:last-of-type {
   font-size: .8em;
   color: #696969;
+}
+
+.edit-head {
+  border-top: 2px solid #6d6d61;
+  padding: 20px 0;
+  color: $theme-colour;
+  font-weight: bold;
+}
+
+.update-profile-buttons .btn input,
+.update-profile-buttons .btn input:focus,
+.update-profile-buttons .btn input:active {
+  background-color: transparent;
+  border: none;
+  outline: 0;
+}
+
+.update-profile-buttons .btn,
+.edit-profile .btn {
+  background-color: transparent;
+  border-radius: 0;
+  color: $theme-colour;
+  border: 1px solid $theme-colour;
+  -webkit-transition: all .55s;
+  -moz-transition: all .55s;
+  -ms-transition: all .55s;
+  -o-transition: all .55s;
+  transition: all .55s;
+}
+
+.update-profile-buttons .btn:hover,
+.update-profile-buttons .btn:focus,
+.update-profile-buttons .btn:active,
+.edit-profile .btn:hover,
+.edit-profile .btn:focus,
+.edit-profile .btn:active {
+  background-color: $theme-colour;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.update-profile-buttons .btn {
+  color: #4b4b43;
+}
+
+.update-profile-buttons .btn:hover,
+.update-profile-buttons .btn:focus,
+.update-profile-buttons .btn:active {
+  color: #d5d5be;
+}
+
+.edit-profile .btn a {
+  text-decoration: none;
+  color: $theme-colour;
+}
+
+.update-profile-buttons .btn a {
+  text-decoration: none;
+  color: #4b4b43;
+}
+
+.update-profile-buttons .btn a:hover,
+.update-profile-buttons .btn a:focus,
+.update-profile-buttons .btn a:active,
+.edit-profile .btn a:hover,
+.edit-profile .btn a:focus,
+.edit-profile .btn a:active {
+  text-decoration: none;
+  color: #fff;
 }

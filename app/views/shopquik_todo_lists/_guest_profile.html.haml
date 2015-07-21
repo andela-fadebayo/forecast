@@ -12,7 +12,7 @@
       %p
         Joined on:
         = datetime_formatted(current_guest.created_at, '/', ':')
-    #edit-profile
+    .edit-profile
       .btn= link_to 'EDIT PROFILE', edit_guest_registration_path, remote: true
     #edit-profile-div
 
