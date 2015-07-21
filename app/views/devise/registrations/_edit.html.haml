@@ -45,7 +45,9 @@
       %i (we need your current password to confirm your changes)
     = f.password_field :current_password, autocomplete: "off", placeholder: 'Current Password', class: 'form-control'
   .update-profile-buttons
-    .btn= link_to "Cancel", :back
+    = link_to :back do
+      .btn
+        Cancel
     .btn.pull-right= f.submit "UPDATE PROFILE"
 %h3 Cancel my account
 %p

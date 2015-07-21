@@ -13,7 +13,9 @@
         Joined on:
         = datetime_formatted(current_guest.created_at, '/', ':')
     .edit-profile
-      .btn= link_to 'EDIT PROFILE', edit_guest_registration_path, remote: true
+      = link_to edit_guest_registration_path, remote: true do
+        .btn
+          EDIT PROFILE
     #edit-profile-div
 
 #edit_modal.modal.fade{role: 'dialog', 'aria-labelledby' => "myModalLabel"}
