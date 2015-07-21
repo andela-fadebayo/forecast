@@ -28,6 +28,17 @@ body {
   background-color: #aaa;
 }
 
+.flash {
+  position: fixed;
+  -moz-opacity: 0.9;          /* Netscape */
+  -khtml-opacity: 0.9;        /* Safari 1.x */
+  opacity: 0.9;
+  text-align: center;
+  z-index: 9999;
+  left: 45%;
+  margin-top: 20px;
+}
+
 
 /* HOME BACKGROUND IMAGE */
 #home-bg {
@@ -49,7 +60,7 @@ body {
 }
 
 #shopquik-bg {
-  background: image-url('home_bg_overlay_sq.jpg') center center no-repeat;
+  background: image-url('shopquik_bg_trans.png') center center no-repeat;
   background-attachment: fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;

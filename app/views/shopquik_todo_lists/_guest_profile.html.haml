@@ -1,0 +1,19 @@
+.container-fluid
+  .row
+    #profile-picture
+      -#%img{src: "#{@guest.image}", alt: "#{@guest.first_name}'s image"}
+      .text-center= image_tag("#{current_guest.image}")
+    #guest-details
+      %p #{current_guest.first_name} #{current_guest.last_name}
+      %p= current_guest.sex
+      %p= date_formatted(current_guest.birthday, '/')
+      %p= current_guest.email
+      %p= current_guest.username
+      %p
+        Joined on:
+        = datetime_formatted(current_guest.created_at, '/', ':')
+    #edit-profile
+      .btn= link_to 'EDIT PROFILE', edit_guest_registration_path, remote: true
+    #edit-profile-div
+
+#edit_modal.modal.fade{role: 'dialog', 'aria-labelledby' => "myModalLabel"}

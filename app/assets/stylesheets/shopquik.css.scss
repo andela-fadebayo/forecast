@@ -1,18 +1,38 @@
 #my-shopping-list {
-  background-color: #fff;
+//  background-color: #fff;
+//  opacity: .9;
+}
+
+#my-shopping-list h2 {
+  font-weight: bold;
+  color: #442102;
 }
 
 #month-list {
-  border: 1px solid greenyellow;
+  padding: 10px 20px;
+}
+
+#month-list-inner {
+  border: 1px solid #000;
+  padding: 20px;
 }
 
 #list-items {
-  border: 1px solid red;
+  padding: 10px 20px;
+}
+
+#list-items-inner {
+  border: 1px solid #000;
+  padding: 20px;
 }
 
 .list-items,
 .register-modal p {
   color: #fff;
+}
+
+ul.lists {
+  padding: 0;
 }
 
 ul.items li,
