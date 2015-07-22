@@ -1,6 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe Budgets::MonthlyEarningsController, type: :controller do
+  let(:guest) { create(:guest) }
+
+  before do
+    allow(request.env['warden']).to receive(:authenticate!) { guest }
+    allow(controller).to receive(:current_guest) { guest }
+  end
 
   describe "GET #index" do
     it "returns http success" do

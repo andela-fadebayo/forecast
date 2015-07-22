@@ -4,7 +4,7 @@ class ShopquikTodoListsController < ApplicationController
 
   def index
     @home_bg = 'shopquik-bg'
-    @title = 'Shopquik Todo'
+    @title = 'Shopquik - Todo'
     @todo_lists = current_guest.shopquik_todo_lists.order("updated_at DESC")
   end
 

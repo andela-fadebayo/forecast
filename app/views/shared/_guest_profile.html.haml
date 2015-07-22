@@ -1,8 +1,7 @@
 .container-fluid
   .row
     #profile-picture
-      -#%img{src: "#{@guest.image}", alt: "#{@guest.first_name}'s image"}
-      .text-center= image_tag("#{current_guest.image}")
+      .text-center= image_tag("#{current_guest.image}", alt: "#{current_guest.first_name}'s picture")
     #guest-details
       %p #{current_guest.first_name} #{current_guest.last_name}
       %p= current_guest.sex
@@ -12,10 +11,10 @@
       %p
         Joined on:
         = datetime_formatted(current_guest.created_at, '/', ':')
-    .edit-profile
-      = link_to edit_guest_registration_path, remote: true do
-        .btn
-          EDIT PROFILE
+      .edit-profile
+        = link_to edit_guest_registration_path, remote: true do
+          .btn
+            EDIT PROFILE
     #edit-profile-div
 
 #edit_modal.modal.fade{role: 'dialog', 'aria-labelledby' => "myModalLabel"}

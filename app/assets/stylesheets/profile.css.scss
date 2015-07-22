@@ -94,3 +94,43 @@ $theme-colour: #442102;
   text-decoration: none;
   color: #fff;
 }
+
+.edit-profile .btn {
+  width: 100%;
+  padding: 12px 12px;
+  font-size: 1em;
+  margin-top: 20px;
+}
+
+#delete-account {
+  margin: 40px auto;
+  border-top: 2px solid #442102;
+  text-align: center;
+}
+
+#delete-account h3 {
+  background-color: #df3e3e;
+  color: #c6cccc;
+  padding: 10px;
+}
+
+#delete-account .button_to input:nth-of-type(2) {
+  padding: 10px;
+  margin-top: 10px;
+  color: #df3e3e;
+  border: 1px solid #df3e3e;
+  outline: 0;
+  -webkit-transition: all .55s;
+  -moz-transition: all .55s;
+  -ms-transition: all .55s;
+  -o-transition: all .55s;
+  transition: all .55s;
+}
+
+#delete-account .button_to input:nth-of-type(2):hover,
+#delete-account .button_to input:nth-of-type(2):focus,
+#delete-account .button_to input:nth-of-type(2):active {
+  background-color: #df3e3e;
+  color: #ececec;
+  border: 1px solid #ececec;
+}

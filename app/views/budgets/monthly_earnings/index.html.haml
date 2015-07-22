@@ -1,3 +1,10 @@
 = render 'shared/navbar'
-%h1 Budgets::MonthlyEarnings#index
-%p Find me in app/views/budgets/monthly_earnings/index.html.haml
+.container-fluid
+  .row
+    .col-md-3
+      #profile.col-md-11
+        = render 'shared/guest_profile'
+      .col-md-1
+    .col-md-8
+      %h1 Budgets::MonthlyEarnings#index
+      %p Find me in app/views/budgets/monthly_earnings/index.html.haml

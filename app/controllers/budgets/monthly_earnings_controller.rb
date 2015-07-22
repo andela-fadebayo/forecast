@@ -1,5 +1,9 @@
 class Budgets::MonthlyEarningsController < ApplicationController
+  before_action :authenticate_guest!
+
   def index
+    @home_bg = 'budget-bg'
+    @title = 'Budget - Monthly Earnings'
   end
 
   def show
