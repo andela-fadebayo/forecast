@@ -15,6 +15,11 @@ Rails.application.routes.draw do
     end
   end
 
+  # routes for budgets monthly earnings, balance summary and budget
+  namespace :budgets do
+    resources :monthly_earnings
+  end
+
   # You can have the root of your site routed with "root"
   root 'home#index'
 
