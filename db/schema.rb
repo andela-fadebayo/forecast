@@ -11,10 +11,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150627195937) do
+ActiveRecord::Schema.define(version: 20150722114807) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "budgets_balance_summaries", force: :cascade do |t|
+    t.integer  "budgets_monthly_earning_id"
+    t.integer  "starting",                   limit: 8
+    t.integer  "ending",                     limit: 8
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
+  end
+
+  add_index "budgets_balance_summaries", ["budgets_monthly_earning_id"], name: "index_budgets_balance_summaries_on_budgets_monthly_earning_id", using: :btree
+
+  create_table "budgets_budgets", force: :cascade do |t|
+    t.integer  "budgets_balance_summary_id"
+    t.integer  "amount",                     limit: 8
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
+  end
+
+  add_index "budgets_budgets", ["budgets_balance_summary_id"], name: "index_budgets_budgets_on_budgets_balance_summary_id", using: :btree
+
+  create_table "budgets_monthly_earnings", force: :cascade do |t|
+    t.string   "monthyear"
+    t.integer  "earning",    limit: 8
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.integer  "guest_id"
+  end
+
+  add_index "budgets_monthly_earnings", ["guest_id"], name: "index_budgets_monthly_earnings_on_guest_id", using: :btree
 
   create_table "guests", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -74,6 +103,7 @@ ActiveRecord::Schema.define(version: 20150627195937) do
 
   add_index "shopquik_todo_lists", ["guest_id"], name: "index_shopquik_todo_lists_on_guest_id", using: :btree
 
+  add_foreign_key "budgets_monthly_earnings", "guests"
   add_foreign_key "providers", "guests"
   add_foreign_key "shopquik_todo_items", "shopquik_todo_lists"
   add_foreign_key "shopquik_todo_lists", "guests"

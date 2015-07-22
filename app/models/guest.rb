@@ -1,6 +1,8 @@
 class Guest < ActiveRecord::Base
   has_many :providers
-  has_many :shopquik_todo_lists, :class_name => 'Shopquik::TodoList', foreign_key: 'guest_id'
+  has_many :shopquik_todo_lists, class_name: 'Shopquik::TodoList', foreign_key: 'guest_id'
+  has_many :budgets_monthly_earnings, class_name: 'Budgets::MonthlyEarning', foreign_key: 'guest_id'
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
