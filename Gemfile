@@ -16,6 +16,10 @@ gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 4.3.0'
 gem 'bootstrap-social-rails', '~> 4.8.0'
 
+# Required by the bootstrap template included
+gem 'html5shiv-js-rails'
+gem 'respond-js-rails'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views

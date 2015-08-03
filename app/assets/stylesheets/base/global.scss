@@ -1,0 +1,23 @@
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: 'QuickSand', sans-serif;
+  background-color: #aaa;
+}
+
+.flash {
+  position: fixed;
+  -moz-opacity: 0.9;          /* Netscape */
+  -khtml-opacity: 0.9;        /* Safari 1.x */
+  opacity: 0.9;
+  text-align: center;
+  z-index: 9999;
+  left: 45%;
+  margin-top: 20px;
+}

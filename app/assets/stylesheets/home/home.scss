@@ -1,0 +1,53 @@
+/* HOME BACKGROUND IMAGE */
+#home-bg {
+  background: image-url('home_bg_overlay_1.jpg') center center no-repeat;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#home-in-bg {
+  background: image-url('home_bg_overlay_2.jpg') center center no-repeat;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* HOME TEXT */
+#home {
+  color: #fff;
+}
+
+.logo img {
+  max-width: 80% !important;
+  height: auto;
+}
+
+.quote {
+  padding: 20px;
+  margin: 40px auto;
+  float: none;
+  background: image-url('opaque_bg.png') center center no-repeat;
+}
+
+.quote p {
+  font-size: 1.3em;
+}
+
+
+/* HOME FOOTER */
+footer {
+  padding-top: 180px;
+}
+
+footer ul li {
+  font-size: 1.3em;
+  display: inline-block;
+  padding-top: 20px;
+  margin-right: 20px;
+  bottom: 0;
+}

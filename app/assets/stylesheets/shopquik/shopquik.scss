@@ -1,3 +1,12 @@
+#shopquik-bg {
+  background: image-url('shopquik_bg_trans.png') center center no-repeat;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 #my-shopping-list {
 //  background-color: #fff;
 //  opacity: .9;
