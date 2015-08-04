@@ -223,6 +223,10 @@ footer ul li {
 
 /* Custom Horizontal Rule */
 
+hr {
+  border-top: 1px solid #888;
+}
+
 hr.small {
   max-width: 100px;
 }
