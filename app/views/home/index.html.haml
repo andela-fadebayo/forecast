@@ -1,14 +1,41 @@
-#home
-  = render 'nav_home'
-  .container
-    .row
-      .text-center.logo
-        = image_tag('forecast_white.png', alt: 'Forecast Logo')
-      .quote.text-center.col-md-5
-        - if guest_signed_in?
-          %p
-            %em “Both optimists and pessimists contribute to our society.  The optimist invents the airplane and the pessimist the parachute.” <br> – Gil Stern
-        - else
-          %p
-            %em “The pessimist complains about the wind; the optimist expects it to change; the realist adjusts the sails.” <br> – William Arthur Ward
-  = render 'footer_home'
+-#-#navigation
+= render 'nav_toggle'
+
+<header #{"id=#{@home_bg}"} class="header">
+.text-vertical-center
+  = render 'header'
+</header>
+
+%section#about.about
+  = render 'about'
+
+
+:javascript
+  //Opens the sidebar menu
+  $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+
+  // Closes the sidebar menu
+    $("#menu-close").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+
+  // Scrolls to the selected menu item on the page
+    $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });

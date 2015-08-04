@@ -1,0 +1,26 @@
+-if !guest_signed_in?
+  = render 'nav_home'
+-else
+  %a#menu-toggle.btn.btn-dark.btn-lg.toggle{href: '#'}
+    %i.fa.fa-bars
+  %nav#sidebar-wrapper
+    %ul.sidebar-nav
+      %a#menu-close.btn.btn-light.btn-lg.pull-right.toggle{href: '#'}
+        %i.fa.fa-times
+      %li.sidebar-brand
+        %a{href: "#top", onclick: "$(\"#menu-close\").click();"} Forecast
+      %li.name
+        Hi, #{ current_guest.first_name } #{ current_guest.last_name }
+      %li{:href => "#top", :onclick => "$(\"#menu-close\").click();"}
+        = link_to 'Budget', budgets_monthly_earnings_path
+      %li{:href => "#top", :onclick => "$(\"#menu-close\").click();"}
+        = link_to 'Shopquik', shopquik_todo_lists_path
+      %li{:href => "#top", :onclick => "$(\"#menu-close\").click();"}
+        = link_to 'Track', shopquik_todo_lists_path
+      %li.nav-line
+      %li
+        %a{:href => "#about", :onclick => "$(\"#menu-close\").click();"}
+          About
+      %li.nav-line
+      %li
+        = link_to 'LOGOUT', destroy_guest_session_path, method: :delete
