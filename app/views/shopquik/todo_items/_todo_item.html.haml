@@ -1,24 +1,20 @@
 .row
-  - if todo_item.completed?
-    .complete
-      %ul.items
+  .complete{id: "list_item_#{todo_item.id}"}
+    - if todo_item.completed?
+      %ul.complete-item.items
         %li{"data-toggle" => "tooltip", "data-placement" => "top", title: "Item Completed"}
           = link_to complete_shopquik_todo_list_shopquik_todo_item_path(@todo_list, todo_item.id), method: :patch, remote: true do
-            %i.fa.fa-check{:style => "opacity: 0.4;"}
+            %i.fa.fa-check
         %li
-          %p{:style => "opacity: 0.4;"}
-            %strike= todo_item.item
+          %p= todo_item.item
         %li
-          %p{:style => "opacity: 0.4;"}
-            %strike= todo_item.quantity
+          %p= todo_item.quantity
         %li
-          %p{:style => "opacity: 0.4;"}
-            %strike= todo_item.cost
+          %p= todo_item.cost
         %li{"data-toggle" => "tooltip", "data-placement" => "top", title: "Delete Item"}
           = link_to shopquik_todo_list_shopquik_todo_item_path(@todo_list, todo_item.id), method: :delete, data: { confirm: "Are you sure?" }, remote: true do
             %i.fa.fa-trash
-  - else
-    .complete
+    - else
       %ul.items
         %li{"data-toggle" => "tooltip", "data-placement" => "top", title: "Mark As Complete"}
           = link_to complete_shopquik_todo_list_shopquik_todo_item_path(@todo_list, todo_item.id), method: :patch, remote: true do

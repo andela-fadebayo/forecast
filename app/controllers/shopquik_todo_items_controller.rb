@@ -10,16 +10,25 @@ class ShopquikTodoItemsController < ApplicationController
 
   def destroy
     if @todo_item.destroy
-      flash[:success] = 'List item was deleted.'
-      redirect_to @todo_list
+      # flash[:notice] = 'List item was deleted.'
+
+      respond_to do |format|
+        format.html { redirect_to @todo_list }
+        format.js { render template: 'shopquik/todo_items/delete' }
+      end
     else
-      flash[:error] = 'List item could not be deleted.'
+      flash[:alert] = 'List item could not be deleted.'
+      redirect_to @todo_list
     end
   end
 
   def complete
     @todo_item.update_attribute(:completed_at, Time.now)
-    redirect_to @todo_list
+
+    respond_to do |format|
+      format.html { redirect_to @todo_item }
+      format.js { render template: 'shopquik/todo_items/complete' }
+    end
   end
 
 

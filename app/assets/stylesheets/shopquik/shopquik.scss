@@ -47,3 +47,8 @@ ul.items li,
 ul.lists li {
   display: inline-block;
 }
+
+.complete-item p {
+  opacity: 0.4;
+  text-decoration: line-through;
+}
