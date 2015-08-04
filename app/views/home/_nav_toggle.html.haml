@@ -21,6 +21,9 @@
       %li
         %a{:href => "#about", :onclick => "$(\"#menu-close\").click();"}
           About
+      %li
+        %a{:href => "#forecasting", :onclick => "$(\"#menu-close\").click();"}
+          Forecasting
       %li.nav-line
       %li
         = link_to 'LOGOUT', destroy_guest_session_path, method: :delete
