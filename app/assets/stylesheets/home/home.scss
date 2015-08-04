@@ -75,7 +75,7 @@ footer ul li {
   height: 100%;
   margin-right: -250px;
   overflow-y: auto;
-  background: #222;
+  background: #464340;
   -webkit-transition: all 0.4s ease 0s;
   -moz-transition: all 0.4s ease 0s;
   -ms-transition: all 0.4s ease 0s;
@@ -218,4 +218,20 @@ footer ul li {
 
 .about {
   padding: 50px 0;
+}
+
+/* Custom Horizontal Rule */
+
+hr.small {
+  max-width: 100px;
+}
+
+/* Financial Forecasting */
+
+.forecasting {
+  padding: 50px 0;
+}
+
+.forecasting-item {
+  margin-bottom: 30px;
 }

@@ -1,12 +1,12 @@
 #nav-others {
   padding: 15px 0;
-  background-color: #e7ddd4;
+  background-color: $light-brown;
   border-bottom: 2px solid #442102;
   opacity: .9;
 }
 
 #nav-others a {
-  color: #442102;
+  color: $theme-colour;
 }
 
 .navbar {
@@ -34,14 +34,14 @@
 #logo-text a:active {
   color: #852f02;
   text-decoration: none;
-  border-bottom: 2px solid #442102;
+  border-bottom: 2px solid $theme-colour;
   padding-bottom: 6px;
 }
 
 .s-logout {
   margin-left: 20px;
   font-size: .95em;
-  border: 1px solid #442102;
+  border: 1px solid $theme-colour;
   -webkit-transition: all  .4s;
   -moz-transition: all  .4s;
   -ms-transition: all  .4s;
@@ -52,7 +52,7 @@
 .s-logout:hover,
 .s-logout:focus,
 .s-logout:active {
-  background-color: #442102;
+  background-color: $theme-colour;
 }
 
 .s-logout a {
@@ -81,9 +81,9 @@
 .sub-links:focus,
 .sub-links:active {
   font-weight: bolder;
-  border-bottom: 1px solid #442102;
+  border-bottom: 1px solid $theme-colour;
 }
 
 .active-nav {
-  border-bottom: 1px solid #442102;
+  border-bottom: 1px solid $theme-colour;
 }
