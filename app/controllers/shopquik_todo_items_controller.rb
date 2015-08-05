@@ -10,8 +10,6 @@ class ShopquikTodoItemsController < ApplicationController
 
   def destroy
     if @todo_item.destroy
-      # flash[:notice] = 'List item was deleted.'
-
       respond_to do |format|
         format.html { redirect_to @todo_list }
         format.js { render template: 'shopquik/todo_items/delete' }

@@ -3,6 +3,8 @@
   %h4= @todo_list.description
   .container-fluid
     .row
+      %p.status
+      %p.delete-status
       - if @todo_list.shopquik_todo_items.empty?
         %p
           %em There are currently no items under this list...add now!

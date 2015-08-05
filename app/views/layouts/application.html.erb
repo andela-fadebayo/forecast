@@ -16,11 +16,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body <%= "id=#{@home_bg}" %>>
-  <div class="flash">
-    <%= render 'shared/notification' %>
-  </div>
-
+  <%= render 'shared/notification' %>
   <%= yield %>
-
 </body>
 </html>

@@ -26,3 +26,13 @@ body {
   left: 45%;
   margin-top: 20px;
 }
+
+.status {
+  color: #000000;
+  background-color: $alert-success-bg;
+}
+
+.delete-status {
+  color: #000000;
+  background-color: $alert-danger-bg;
+}
