@@ -1,4 +1,4 @@
-%h1 forecast
+%h1.brand-heading forecast
 .quote.text-center.col-md-5
   - if guest_signed_in?
     %p
@@ -6,3 +6,5 @@
   - else
     %p
       %em “The pessimist complains about the wind; the optimist expects it to change; the realist adjusts the sails.” <br> – William Arthur Ward
+%a.btn.btn-circle.page-scroll{href: '#forecasting'}
+  %i.fa.fa-angle-double-down.animated

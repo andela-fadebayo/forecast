@@ -63,6 +63,9 @@ gem 'figaro'
 # Use Puma web server for Heroku deployment
 gem 'puma'
 
+# Use newrelic_rpm gem to keep heroku app alive
+gem 'newrelic_rpm'
+
 # Use Factory Girl for test fixtures
 gem 'factory_girl_rails', '~> 4.0'
 
