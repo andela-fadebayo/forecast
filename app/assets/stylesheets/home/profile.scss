@@ -8,6 +8,21 @@
   width: 60%;
 }
 
+.no-image {
+  border: 1px solid #000;
+  display: table;
+  height: 203px;
+  margin: 20px auto;
+  width: 202px;
+}
+
+.no-image p {
+  display: table-cell;
+  font-size: 1.1em;
+  text-align: center;
+  vertical-align: middle;
+}
+
 #guest-details {
   font-size: 1.2em;
   font-weight: bold;

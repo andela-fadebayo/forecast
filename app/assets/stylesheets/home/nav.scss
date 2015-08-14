@@ -195,7 +195,7 @@
 }
 
 .name {
-  font-size: 1.5em;
+  font-size: 1.3em;
   color: $glacier_gray;
 }
 
@@ -334,4 +334,8 @@
 .auth-login a:focus,
 .auth-login a:active {
   text-decoration: none;
+}
+
+.image-label {
+  color: white;
 }

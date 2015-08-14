@@ -64,6 +64,11 @@ GEM
     capybara-webkit (1.4.1)
       capybara (>= 2.3.0, < 2.5.0)
       json
+    carrierwave (0.10.0)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      json (>= 1.7)
+      mime-types (>= 1.16)
     childprocess (0.5.5)
       ffi (~> 1.0, >= 1.0.11)
     coderay (1.1.0)
@@ -288,6 +293,7 @@ DEPENDENCIES
   byebug
   capybara
   capybara-webkit
+  carrierwave
   coffee-rails (~> 4.1.0)
   devise
   factory_girl_rails (~> 4.0)

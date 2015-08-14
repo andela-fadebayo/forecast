@@ -1,7 +1,11 @@
 .container-fluid
   .row
     #profile-picture
-      .text-center= image_tag("#{current_guest.image}", alt: "#{current_guest.first_name}'s picture")
+      -if current_guest.image.file.nil?
+        .text-center.no-image
+          %p Click <strong>'Edit Profile'</strong> to Upload a profile picture
+      -else
+        .text-center= image_tag("#{current_guest.image}", alt: "#{current_guest.first_name}'s picture")
     #guest-details
       %p #{current_guest.first_name} #{current_guest.last_name}
       %p= current_guest.sex

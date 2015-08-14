@@ -1,4 +1,6 @@
 class Guest < ActiveRecord::Base
+  mount_uploader :image, PictureUploader
+
   has_many :providers
   has_many :shopquik_todo_lists, class_name: 'Shopquik::TodoList', foreign_key: 'guest_id'
   has_many :budgets_monthly_earnings, class_name: 'Budgets::MonthlyEarning', foreign_key: 'guest_id'

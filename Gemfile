@@ -54,11 +54,14 @@ gem 'devise'
 # Use Google OmniAuth2 with devise for Google sign-on
 gem 'omniauth-google-oauth2'
 
-#Use Facebook Oauth with devise
+# Use Facebook Oauth with devise
 gem 'omniauth-facebook'
 
 # Use Figaro to store environment secrets
 gem 'figaro'
+
+# Use CarrierWave for file upload
+gem 'carrierwave'
 
 # Use Puma web server for Heroku deployment
 gem 'puma'

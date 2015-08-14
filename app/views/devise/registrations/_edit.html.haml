@@ -1,6 +1,6 @@
 %h2.edit-head.text-center
   Edit Your Profile
-= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
+= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, multipart: true }) do |f|
   = devise_error_messages!
   .form-group
     .control-label
@@ -16,8 +16,11 @@
     = f.select :sex, [['Male', 'Male'], ['Female', 'Female']], {}, class: 'form-control'
   .form-group
     .control-label
-      = f.label :image, 'Image Link'
-    = f.text_field :image, placeholder: 'Paste a link to your picture', class: 'form-control'
+      -if current_guest.image.file.nil?
+        = f.label :image, 'Upload An Image'
+      -else
+        = f.label :image, 'Change Profile Image'
+    = f.file_field :image, class: 'form-control'
   .form-group
     .control-label
       = f.label :birthday

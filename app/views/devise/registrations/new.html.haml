@@ -14,9 +14,9 @@
     %br/
     = f.select :sex, [['Male', 'Male'], ['Female', 'Female']]
   .field
-    = f.label :image, 'Image Link'
+    = f.label 'Upload an Image'
     %br/
-    = f.text_field :image
+    = f.file_field :image
   .field
     = f.label :birthday
     %br/
