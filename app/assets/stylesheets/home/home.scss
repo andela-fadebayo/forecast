@@ -21,20 +21,6 @@
 }
 
 
-/* HOME FOOTER */
-footer {
-  padding-top: 180px;
-}
-
-footer ul li {
-  font-size: 1.3em;
-  display: inline-block;
-  padding-top: 20px;
-  margin-right: 20px;
-  bottom: 0;
-}
-
-
 /* USING A NEW THEME */
 
 #menu-toggle {
@@ -269,4 +255,29 @@ hr.small {
 
 .text-forecasting {
   color: $light-brown;
+}
+
+/* Swim */
+
+.swim {
+  display: table;
+  width: 100%;
+  height: 400px;
+  color: #fff;
+  background: image-url('never_swim_naked.jpg') no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+.swim h2 {
+  font-size: 6em;
+  font-weight: bold;
+}
+
+/* Footer */
+
+footer {
+  padding: 100px 0 20px;
 }
