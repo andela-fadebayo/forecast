@@ -1,11 +1,11 @@
-#shopquik-bg {
-  background: image-url('shopquik_bg_trans.png') center center no-repeat;
-  background-attachment: fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
+//#shopquik-bg {
+//  background: image-url('shopquik_bg_trans.png') center center no-repeat;
+//  background-attachment: fixed;
+//  -webkit-background-size: cover;
+//  -moz-background-size: cover;
+//  -o-background-size: cover;
+//  background-size: cover;
+//}
 
 #my-shopping-list {
 //  background-color: #fff;
@@ -72,4 +72,8 @@
   background-color: transparent;
   border: 1px solid $theme-colour;
   color: $theme-colour;
+}
+
+.new-item-input tbody tr td input {
+  width: 80px;
 }

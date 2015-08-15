@@ -6,8 +6,8 @@
       %p.status
       %p.delete-status
       - if @todo_list.shopquik_todo_items.empty?
-        %p
-          %em There are currently no items under this list...add now!
+        %p.status
+          There are currently no items under this list...add now!
       - else
         .row
           .items.table-responsive
@@ -20,11 +20,4 @@
                   %th Cost
                   %th Delete
               = render @todo_list.shopquik_todo_items
-      %table
-        %thead
-          %tr
-            %th
-            %th
-            %th
-            %th
-        = render partial: 'shopquik/todo_items/new'
+      = render partial: 'shopquik/todo_items/new'

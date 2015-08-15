@@ -15,6 +15,7 @@ ul {
 
 html,
 body {
+  background-color: #e4e4e4;
   width: 100%;
   height: 100%;
 }
@@ -48,5 +49,4 @@ body {
 .form-control:focus,
 .form-control:active {
   border: 1px solid $theme-colour;
-  outline-color: $links-hover;
 }

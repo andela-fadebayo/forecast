@@ -1,9 +1,35 @@
 = form_for([@todo_list, @todo_list.shopquik_todo_items.build], remote: true) do |t|
-  .field
-    = t.text_field :item, placeholder: 'Item'
-  .field
-    = t.number_field :quantity, placeholder: 'Quantity'
-  .field
-    = t.number_field :cost, placeholder: 'Cost'
-  .actions
-    = t.submit 'ADD'
+  %table.table.table-condensed.new-item-input
+    %thead
+      %tr
+        %th
+        %th
+        %th
+        %th
+    %tbody
+      %tr
+        %td= t.text_field :item, placeholder: 'Item', class: 'form-control'
+        %td= t.number_field :quantity, placeholder: 'Quantity', class: 'form-control'
+        %td= t.number_field :cost, placeholder: 'Cost', class: 'form-control'
+        %td= t.submit 'ADD', class: 'btn btn-primary'
+  -#
+  -#
+  -#%tr
+  -#  = form_for([@todo_list, @todo_list.shopquik_todo_items.build], remote: true, html: {class: 'form-inline'}) do |t|
+  -#    %td
+  -#      = t.text_field :item, placeholder: 'Item', class: 'form-control'
+  -#    %td
+  -#      = t.number_field :quantity, placeholder: 'Quantity', class: 'form-control'
+  -#    %td
+  -#      = t.number_field :cost, placeholder: 'Cost', class: 'form-control'
+  -#    %td
+  -#      = t.submit 'ADD', class: 'btn btn-primary'
+
+
+  -#.form-group
+  -#  = t.text_field :item, placeholder: 'Item', class: 'form-control'
+  -#.form-group
+  -#  = t.number_field :quantity, placeholder: 'Quantity', class: 'form-control'
+  -#.form-group
+  -#  = t.number_field :cost, placeholder: 'Cost', class: 'form-control'
+  -#= t.submit 'ADD', class: 'btn btn-primary'
