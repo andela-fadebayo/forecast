@@ -1,5 +1,12 @@
 a {
   text-decoration: none;
+  color: $theme-colour;
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: $links-hover;
 }
 
 ul {
@@ -35,4 +42,11 @@ body {
 .delete-status {
   color: #000000;
   background-color: $alert-danger-bg;
+}
+
+.form-control:hover,
+.form-control:focus,
+.form-control:active {
+  border: 1px solid $theme-colour;
+  outline-color: $links-hover;
 }

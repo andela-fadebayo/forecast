@@ -10,25 +10,31 @@
       #month-list.col-md-6
         #month-list-inner
           %h3.text-center Select Month
-          - @todo_lists.each do |td_list|
-            %ul.lists
-              %li
-                %h4= link_to td_list.title, td_list, remote: true
-              %li{"data-toggle" => "tooltip", "data-placement" => "top", title: "Edit List"}
-                = link_to edit_shopquik_todo_list_path(td_list), remote: true do
-                  %i.fa.fa-pencil-square-o
-              %li{"data-toggle" => "tooltip", "data-placement" => "right", title: "Delete List"}
-                = link_to shopquik_todo_list_path(td_list), method: :delete, data: { confirm: "You're about to delete a list. Are you sure?" } do
-                  %i.fa.fa-trash-o
-
-          %span
+          .table-responsive
+            %table.table.table-condensed.table-hover
+              %thead
+                %tr
+                  %th List
+                  %th Edit
+                  %th Delete
+              %tbody
+                - @todo_lists.each do |td_list|
+                  %tr
+                    %td= link_to td_list.title, td_list, remote: true
+                    %td
+                      = link_to edit_shopquik_todo_list_path(td_list), remote: true do
+                        %i.fa.fa-pencil-square-o{"data-toggle" => "tooltip", "data-placement" => "top", title: "Edit List"}
+                    %td
+                      = link_to shopquik_todo_list_path(td_list), method: :delete, data: { confirm: "You're about to delete a list. Are you sure?" } do
+                        %i.fa.fa-trash-o{"data-toggle" => "tooltip", "data-placement" => "right", title: "Delete List"}
+          .create-new-list.text-center
             = link_to new_shopquik_todo_list_path, remote: true do
-              %i.fa.fa-list-ol
+              .btn
                 CREATE NEW LIST
 
       #list-items.col-md-6
         #list-items-inner.text-center
-          %h4 Click a list to see and add items to the list.
+          %h3 Click a list to see and add items.
 
 #newListModal.modal.fade{role: 'dialog', 'aria-labelledby' => "myModalLabel"}
 

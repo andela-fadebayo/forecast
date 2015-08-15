@@ -9,5 +9,22 @@
         %p
           %em There are currently no items under this list...add now!
       - else
-        = render @todo_list.shopquik_todo_items
-      = render partial: 'shopquik/todo_items/new'
+        .row
+          .items.table-responsive
+            %table.table.table-condensed.table-hover.items-table
+              %thead
+                %tr
+                  %th
+                  %th Item
+                  %th Quantity
+                  %th Cost
+                  %th Delete
+              = render @todo_list.shopquik_todo_items
+      %table
+        %thead
+          %tr
+            %th
+            %th
+            %th
+            %th
+        = render partial: 'shopquik/todo_items/new'

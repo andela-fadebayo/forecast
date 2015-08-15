@@ -39,17 +39,37 @@
   color: #fff;
 }
 
-ul.lists {
-  padding: 0;
-}
-
-ul.items li,
-ul.lists li {
-  display: inline-block;
-}
-
-.complete-item p,
+.complete-item td,
 .complete-item i {
   opacity: 0.4;
   text-decoration: line-through;
+}
+
+.items-table thead tr th {
+  text-align: center;
+  font-weight: bold;
+}
+
+.create-new-list .btn {
+  background-color: $theme-colour;
+  border-radius: 0;
+  border: 1px solid white;
+  color: white;
+  font-size: 1em;
+  margin-top: 20px;
+  padding: 12px 12px;
+  width: 80%;
+  -webkit-transition: all .55s;
+  -moz-transition: all .55s;
+  -ms-transition: all .55s;
+  -o-transition: all .55s;
+  transition: all .55s;
+}
+
+.create-new-list .btn:hover,
+.create-new-list .btn:focus,
+.create-new-list .btn:active {
+  background-color: transparent;
+  border: 1px solid $theme-colour;
+  color: $theme-colour;
 }
