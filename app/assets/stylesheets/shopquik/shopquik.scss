@@ -77,3 +77,54 @@
 .new-item-input tbody tr td input {
   width: 80px;
 }
+
+.create-list-form input,
+.create-list-form textarea {
+  font-size: 1.2em;
+  outline: 0;
+  color: #000;
+  border: 1px solid #000;
+  -webkit-transition: background-color .4s;
+  -moz-transition: background-color .4s;
+  -ms-transition: background-color .4s;
+  -o-transition: background-color .4s;
+  transition: background-color .4s;
+}
+
+.create-list-form input:hover,
+.create-list-form input:focus,
+.create-list-form input:active,
+.create-list-form textarea:hover,
+.create-list-form textarea:focus,
+.create-list-form textarea:active {
+  border: 1px solid #fff;
+  background-color: transparent;
+  color: #fff;
+}
+
+.create-list-form-btn .btn input,
+.create-list-form-btn .btn input:focus,
+.create-list-form-btn .btn input:active {
+  background-color: transparent;
+  border: none;
+  outline: 0;
+}
+
+.create-list-form-btn .btn {
+  background-color: #fff;
+  border-radius: 0;
+  color: #000;
+  -webkit-transition: all .55s;
+  -moz-transition: all .55s;
+  -ms-transition: all .55s;
+  -o-transition: all .55s;
+  transition: all .55s;
+}
+
+.create-list-form-btn .btn:hover,
+.create-list-form-btn .btn:focus,
+.create-list-form-btn .btn:active {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+}
