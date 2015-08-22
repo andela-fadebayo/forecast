@@ -21,8 +21,8 @@
 }
 
 #month-list-inner {
-  border: 1px solid #000;
   padding: 20px;
+  background-color: $list-bg;
 }
 
 #list-items {
@@ -30,8 +30,8 @@
 }
 
 #list-items-inner {
-  border: 1px solid #000;
   padding: 20px;
+  background-color: $list-bg;
 }
 
 .list-items,

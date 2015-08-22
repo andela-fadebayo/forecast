@@ -257,6 +257,19 @@ hr.small {
   color: $light-brown;
 }
 
+.fore-btn a {
+  text-decoration: none;
+}
+
+.fore-btn a:hover {
+  color: #fff;
+}
+
+.fore-btn:hover {
+  background-color: $theme-colour;
+  color: #fff;
+}
+
 /* Swim */
 
 .swim {
