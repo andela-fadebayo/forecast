@@ -1,21 +1,37 @@
-%p welcome
-
-Style this page
-
-%h2 Log in
-= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true
-  .field
-    = f.label :password
-    %br/
-    = f.password_field :password, autocomplete: "off"
-  - if devise_mapping.rememberable?
-    .field
-      = f.check_box :remember_me
-      = f.label :remember_me
-  .actions
-    = f.submit "Log in"
-= render "devise/shared/links"
+#form-box
+  .header
+    %h2
+      %i.fa.fa-line-chart
+      Forecast
+  = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+    .body
+      .form-group
+        .input-group
+          %span.input-group-addon
+            %i.fa.fa-envelope.fa-fw
+          .fore-input= f.email_field :email, autofocus: true, placeholder: 'Email', class: 'form-control'
+      .field
+        .form-group
+          .input-group
+            %span.input-group-addon
+              %i.fa.fa-lock.fa-fw
+            .fore-input= f.password_field :password, autocomplete: 'off', placeholder: 'Password', class: 'form-control'
+    .footer
+      - if devise_mapping.rememberable?
+        .field
+          = f.check_box :remember_me
+          = f.label :remember_me
+      .fore-login-btn.text-center
+        .btn= f.submit "Log in"
+    .social-login
+      - if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations'
+        = link_to "Forgot your password?", new_password_path(resource_name)
+      %br/
+      - if devise_mapping.registerable? && controller_name != 'registrations'
+        = link_to 'Register', new_registration_path(resource_name)
+  %br/
+  %br/
+  %center.other
+    Powered by <a href="/">Forecast.com</a>
+    | <a target="_blank" href="mailto: feedback@forecast.com?Subject=Feedback">Feedback</a> &amp;
+    <a target="_blank" href="mailto: support@forecast.com?Subject=Support">Support</a>

@@ -129,14 +129,18 @@
 .login-btn .btn input:active,
 .create-btn .btn input,
 .create-btn .btn input:focus,
-.create-btn .btn input:active {
+.create-btn .btn input:active,
+.fore-login-btn .btn input,
+.fore-login-btn .btn input:focus,
+.fore-login-btn .btn input:active {
   background-color: transparent;
   border: none;
   outline: 0;
 }
 
 .login-btn .btn,
-.create-btn .btn {
+.create-btn .btn,
+.fore-login-btn .btn {
   background-color: #fff;
   border-radius: 0;
   color: #000;
