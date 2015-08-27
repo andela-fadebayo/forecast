@@ -1,6 +1,6 @@
 #form-box {
-  width: 400px;
-  margin: 100px auto 0;
+  width: 450px;
+  margin: 50px auto 0;
 }
 
 #form-box .header {
@@ -106,9 +106,9 @@
 .fore-login-btn .btn:hover,
 .fore-login-btn .btn:focus,
 .fore-login-btn .btn:active {
-  background-color: transparent;
+  background-color: $links-hover;
   border: 1px solid $theme-colour;
-  color: $theme-colour;
+  color: #fff;
 }
 
 @media (max-width: 767px) {
