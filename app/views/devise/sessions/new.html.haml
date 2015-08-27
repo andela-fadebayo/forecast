@@ -1,8 +1,9 @@
 #form-box
   .header
     %h2
-      %i.fa.fa-line-chart
-      Forecast
+      = link_to(root_path) do
+        %i.fa.fa-line-chart
+        Forecast
   = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
     .body
       .form-group

@@ -3,6 +3,14 @@
   margin: 50px auto 0;
 }
 
+.header a {
+  color: #fff;
+}
+
+.header a:hover {
+  color: $light-brown;
+}
+
 #form-box .header {
   -webkit-border-top-left-radius: 4px;
   -webkit-border-top-right-radius: 4px;
@@ -114,5 +122,6 @@
 @media (max-width: 767px) {
   #form-box {
     width: 90%;
+    margin: 0 auto;
   }
 }
