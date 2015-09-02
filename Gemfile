@@ -72,6 +72,8 @@ gem 'newrelic_rpm'
 # Use Factory Girl for test fixtures
 gem 'factory_girl_rails', '~> 4.0'
 
+gem 'bootstrap-datepicker-rails'
+
 group :development do
   gem 'better_errors'
 end

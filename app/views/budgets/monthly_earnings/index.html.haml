@@ -12,7 +12,7 @@
         .earnings
           - @monthly_earnings.each do |me|
             %ul
-              %li= me.monthyear
+              %li= wordify_date
               %li= me.earning
               -#%li= link_to 'Edit', edit_budgets_monthly_earnings_path(me)
 
