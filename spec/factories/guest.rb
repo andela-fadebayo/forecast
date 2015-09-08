@@ -7,5 +7,6 @@ FactoryGirl.define do
     image 'image-url'
     sex 'Male'
     birthday '2015-01-30'
+    username 'username'
   end
 end

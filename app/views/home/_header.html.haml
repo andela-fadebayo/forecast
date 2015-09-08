@@ -6,4 +6,5 @@
   - else
     %p
       %em “The pessimist complains about the wind; the optimist expects it to change; the realist adjusts the sails.” <br> – William Arthur Ward
-%a.btn.btn-dark.btn-lg{href: '#forecasting'} GET STARTED
+- unless guest_signed_in?
+  %a.btn.btn-dark.btn-lg{href: '#forecasting'} GET STARTED
