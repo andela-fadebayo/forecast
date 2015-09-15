@@ -19,5 +19,10 @@
                   %th Quantity
                   %th Cost
                   %th Delete
+              %tfoot
+                %tr
+                  %th
+                  %th{:colspan => 2} TOTAL
+                  %th.text-center= @todo_list.shopquik_todo_items.sum(:cost)
               = render @todo_list.shopquik_todo_items
       = render partial: 'shopquik/todo_items/new'

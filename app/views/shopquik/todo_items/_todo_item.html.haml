@@ -4,7 +4,7 @@
       %td
         = link_to complete_shopquik_todo_list_shopquik_todo_item_path(@todo_list, todo_item.id), method: :patch, remote: true do
           %i.fa.fa-check-square-o{"data-toggle" => "tooltip", "data-placement" => "top", title: "Item Completed"}
-      %td= todo_item.item
+      %td.text-left= todo_item.item
       %td= todo_item.quantity
       %td= todo_item.cost
       %td
@@ -15,7 +15,7 @@
       %td
         = link_to complete_shopquik_todo_list_shopquik_todo_item_path(@todo_list, todo_item.id), method: :patch, remote: true do
           %i.fa.fa-check-square-o{"data-toggle" => "tooltip", "data-placement" => "top", title: "Mark As Complete"}
-      %td= todo_item.item
+      %td.text-left= todo_item.item
       %td= todo_item.quantity
       %td= todo_item.cost
       %td
