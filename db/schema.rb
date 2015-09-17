@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150722114807) do
+ActiveRecord::Schema.define(version: 20150917102922) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -96,9 +96,10 @@ ActiveRecord::Schema.define(version: 20150722114807) do
   create_table "shopquik_todo_lists", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
     t.integer  "guest_id"
+    t.integer  "total_expenses", limit: 8
   end
 
   add_index "shopquik_todo_lists", ["guest_id"], name: "index_shopquik_todo_lists_on_guest_id", using: :btree

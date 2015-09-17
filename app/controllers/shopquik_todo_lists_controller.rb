@@ -61,6 +61,7 @@ class ShopquikTodoListsController < ApplicationController
 
   def set_todo_list
     @todo_list = Shopquik::TodoList.find(params[:id])
+    Shopquik::TodoList.set_total_expenses(params[:id])
   end
 
   def todo_list_params
