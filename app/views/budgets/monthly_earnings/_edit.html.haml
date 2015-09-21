@@ -1,0 +1,12 @@
+.modal-header
+  .modal-header
+    %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+      %span{"aria-hidden" => "true"} &times;
+    %h4#myModalLabel.modal-title Modal title
+    = form_for @monthly_earning do |me|
+      -#.modal-body
+      = me.text_field :monthyear, :class => 'datepicker'
+      = me.number_field :earning
+      .modal-footer
+        = me.submit :class => 'btn btn-primary'
+        %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"} Close
