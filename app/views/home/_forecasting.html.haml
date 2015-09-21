@@ -12,7 +12,10 @@
             %h4
               %strong Budget
             %p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            .btn.btn-light.fore-btn= link_to 'Get Started', budgets_monthly_earnings_path
+            - if guest_signed_in?
+              .btn.btn-light.fore-btn= link_to 'Set Budget', budgets_monthly_earnings_path
+            - else
+              .btn.btn-light.fore-btn= link_to 'Get Started', budgets_monthly_earnings_path
         .col-md-4.col-sm-6
           .forecasting-item
             %span.fa-stack.fa-4x
@@ -30,4 +33,4 @@
             %h4
               %strong Track
             %p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            .btn.btn-light.fore-btn= link_to 'See Records', root_path
+            .btn.btn-light.fore-btn= link_to 'See All Records', root_path

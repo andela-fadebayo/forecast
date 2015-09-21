@@ -1,0 +1,7 @@
+.text-center
+  Total Expenses
+  %h3
+    - if @todo_list.total_expenses.nil?
+      0
+    - else
+      = @todo_list.total_expenses

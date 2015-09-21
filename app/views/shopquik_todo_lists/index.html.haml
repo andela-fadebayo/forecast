@@ -8,15 +8,15 @@
     #my-shopping-list.col-md-8
       %h2.text-center My Shopping List
       #month-list.col-md-6
-        #month-list-inner
-          %h3.text-center Select Month
+        #inner
+          %h3.text-center Select A List
           .table-responsive
             %table.table.table-condensed.table-hover
               %thead
                 %tr
-                  %th List
-                  %th Edit
-                  %th Delete
+                  %th{scope: 'col'} List
+                  %th{scope: 'col'} Edit
+                  %th{scope: 'col'} Delete
               %tbody
                 - @todo_lists.each do |td_list|
                   %tr
@@ -36,6 +36,31 @@
         -##list-items-inner.text-center{:style => "display:none;"}
         #list-items-inner.text-center
           %h3 Click a list to see and add items
+
+    .col-md-3
+    #my-expenses.col-md-8
+      %h2.text-center My Expenses
+      #fixed-expenses.col-md-6
+        #inner
+          %h3.text-center Fixed Expenses
+          #fi-contents
+
+      #flexible-expenses.col-md-6
+        #inner
+          %h3.text-center Flexible Expenses
+          #fl-contents
+
+    .col-md-3
+    .col-md-8
+      #discretionary-expenses.col-md-6
+        #inner
+          %h3.text-center Discretionary Expenses
+          #di-contents
+
+      #month-summary.col-md-6
+        #inner
+          %h3.text-center Month's Summary
+          #month-summary-contents
 
 #newListModal.modal.fade{role: 'dialog', 'aria-labelledby' => "myModalLabel"}
 

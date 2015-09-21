@@ -7,6 +7,7 @@
 //  background-size: cover;
 //}
 
+/* SHOPPING LIST */
 #my-shopping-list {
 //  background-color: #fff;
 //  opacity: .9;
@@ -16,17 +17,16 @@
   color: #442102;
 }
 
-#month-list {
-  padding: 10px 20px;
+#month-list,
+#list-items,
+#fixed-expenses,
+#flexible-expenses {
+  padding: 20px;
 }
 
-#month-list-inner {
+#inner {
   padding: 20px;
   background-color: $panel-bg;
-}
-
-#list-items {
-  padding: 10px 20px;
 }
 
 #list-items-inner {
@@ -127,4 +127,10 @@
   background-color: transparent;
   border: 1px solid #fff;
   color: #fff;
+}
+
+/* EXPENSES */
+#my-expenses {
+  margin: 30px auto;
+  padding: 20px 0;
 }
