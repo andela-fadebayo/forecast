@@ -12,9 +12,25 @@
         .earnings
           - @monthly_earnings.each do |me|
             %ul
-              %li= me.monthyear
+              %li= link_to 'Edit', edit_budgets_monthly_earning_path(me), remote: true
+              %li= wordify_date(me.monthyear)
               %li= me.earning
-              -#%li= link_to 'Edit', edit_budgets_monthly_earnings_path(me)
 
       #balance-summary.col-md-6
         %p Let's get this show running...
+
+#myModal.modal.fade{"aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+  .modal-dialog{:role => "document"}
+    .modal-content
+-#      .modal-header
+-#        %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+-#          %span{"aria-hidden" => "true"} &times;
+-#        %h4#myModalLabel.modal-title Modal title
+-#      .modal-body
+-#        -#= form_for @monthly_earning do |me|
+-#        -#= me.text_field :monthyear, :class => 'datepicker'
+-#        -#= me.number_field :earning
+-#        -#= me.submit
+-#      .modal-footer
+-#        %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"} Close
+-#        %button.btn.btn-primary{:type => "button"} Save changes

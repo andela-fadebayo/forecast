@@ -1,4 +1,4 @@
 = form_for @monthly_earning do |me|
-  = me.text_field :monthyear
+  = me.text_field :monthyear, :class => 'datepicker'
   = me.number_field :earning
   = me.submit
