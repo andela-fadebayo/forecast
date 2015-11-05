@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   resources :shopquik_todo_lists do
     resources :shopquik_todo_items do
       member do
-        patch :complete
+        patch :toggle_complete
       end
     end
   end

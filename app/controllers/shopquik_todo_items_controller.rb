@@ -20,12 +20,13 @@ class ShopquikTodoItemsController < ApplicationController
     end
   end
 
-  def complete
-    @todo_item.update_attribute(:completed_at, Time.now)
+  def toggle_complete
+    t = @todo_item
+    t.completed_at.nil? ? t.update_attribute(:completed_at, Time.now) : t.update_attribute(:completed_at, nil)
 
     respond_to do |format|
       format.html { redirect_to @todo_item }
-      format.js { render template: 'shopquik/todo_items/complete' }
+      format.js { render template: 'shopquik/todo_items/toggle_complete' }
     end
   end
 

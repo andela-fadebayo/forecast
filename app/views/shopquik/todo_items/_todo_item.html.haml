@@ -2,8 +2,8 @@
   - if todo_item.completed?
     %tr.complete-item.items
       %td
-        = link_to complete_shopquik_todo_list_shopquik_todo_item_path(@todo_list, todo_item.id), method: :patch, remote: true do
-          %i.fa.fa-check-square-o{"data-toggle" => "tooltip", "data-placement" => "top", title: "Item Completed"}
+        = link_to toggle_complete_shopquik_todo_list_shopquik_todo_item_path(@todo_list, todo_item.id), method: :patch, remote: true do
+          %i.fa.fa-check-square-o{"data-toggle" => "tooltip", "data-placement" => "top", title: "Mark As Incomplete"}
       %td.text-left= todo_item.item
       %td= todo_item.quantity
       %td= todo_item.cost
@@ -13,7 +13,7 @@
   -else
     %tr.items
       %td
-        = link_to complete_shopquik_todo_list_shopquik_todo_item_path(@todo_list, todo_item.id), method: :patch, remote: true do
+        = link_to toggle_complete_shopquik_todo_list_shopquik_todo_item_path(@todo_list, todo_item.id), method: :patch, remote: true do
           %i.fa.fa-check-square-o{"data-toggle" => "tooltip", "data-placement" => "top", title: "Mark As Complete"}
       %td.text-left= todo_item.item
       %td= todo_item.quantity
