@@ -26,3 +26,8 @@
                   %th.text-center= @todo_list.shopquik_todo_items.sum(:cost)
               = render @todo_list.shopquik_todo_items
       = render partial: 'shopquik/todo_items/new'
+
+  %h2 Items on a Pie
+  .container-fluid
+    .row
+      #items-pie{style: 'min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto'}

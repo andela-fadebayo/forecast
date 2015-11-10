@@ -4,3 +4,59 @@ $('#fl-contents').html("<%= j render 'shopquik/expenses/flexible' %>");
 $('#di-contents').html("<%= j render 'shopquik/expenses/discretionary' %>");
 $('#month-summary-contents').html("<%= j render 'shopquik/month_summary' %>");
 //$('#list-items-inner').slideDown(550);
+
+// Items Pie
+$(function () {
+  $('#items-pie').highcharts({
+    chart: {
+      plotBackgroundColor: null,
+      plotBorderWidth: null,
+      plotShadow: false
+      // Uncomment this to make the pie chart 3D
+//      type: 'pie',
+//      options3d: {
+//        enabled: true,
+//        alpha: 45,
+//        beta: 0
+//      }
+    },
+    title: {
+      text: 'Items listed for: <%= @todo_list.title %>'
+    },
+    tooltip: {
+      pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+      pie: {
+        allowPointSelect: true,
+        cursor: 'pointer',
+        dataLabels: {
+          enabled: true,
+          format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+          style: {
+            color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+          }
+        }
+      }
+    },
+    series: [{
+      type: 'pie',
+      name: 'June Expenses',
+      data: [
+      <% @todo_list.shopquik_todo_items.each do |i| %>
+        ["<%= i.item %>", <%= i.cost %>],
+      <% end %>
+//        ['MTN Credit',   2100],
+//        ['Other Credits',       600],
+//        {
+//          name: 'Glasses Frame',
+//          y: 7000,
+//          sliced: true,
+//          selected: true
+//        },
+//        ['Shirts',    2000],
+//        ['Socks',     500]
+      ]
+    }]
+  });
+});
