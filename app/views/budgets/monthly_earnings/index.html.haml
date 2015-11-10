@@ -8,7 +8,8 @@
     .col-md-8
       #monthly-earnings.col-md-6
         %h1.text-center Monthly Earnings
-        = render partial: 'new'
+        .newBudget
+          = render partial: 'new'
         .earnings
           - @monthly_earnings.each do |me|
             %ul
