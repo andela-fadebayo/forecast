@@ -18,9 +18,9 @@
                     - @todo_list.errors.full_messages.each do |msg|
                       %li= msg
               .form-group
-                = td.text_field :title, placeholder: 'List Title (YYYY Month)', class: 'form-control'
+                = td.text_field :title, placeholder: 'List Title (YYYY Month)', class: 'form-control', required: ''
               .form-group
-                = td.text_area :description, placeholder: 'List Description', class: 'form-control'
+                = td.text_area :description, placeholder: 'List Description', class: 'form-control', required: ''
               .create-list-form-btn.text-center
                 .btn
                   = td.submit
